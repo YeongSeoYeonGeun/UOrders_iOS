@@ -10,7 +10,6 @@ import UIKit
 class MainViewController: UIViewController {
     
     @IBOutlet weak var myPageButton: UIImageView!
-    
     @IBOutlet weak var cafeNameLabel: UILabel!
     @IBOutlet weak var cafeLoactionLabel: UILabel!
     
