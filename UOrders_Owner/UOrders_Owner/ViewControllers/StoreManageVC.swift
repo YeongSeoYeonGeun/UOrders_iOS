@@ -19,10 +19,16 @@ class StoreManageVC: UIViewController {
                     Menu(menuName: "카페라떼", menuPrice: "1,500원"),
                     Menu(menuName: "카페모카", menuPrice: "2,000원"),
                     Menu(menuName: "플랫화이트", menuPrice: "1,000원"),
-                    Menu(menuName: "콜드브루 아메리카노", menuPrice: "1,500원"),]
+                    Menu(menuName: "콜드브루 아메리카노", menuPrice: "1,500원"),
+                    Menu(menuName: "아메리카노", menuPrice: "1,000원"),
+                    Menu(menuName: "카페라떼", menuPrice: "1,500원"),
+                    Menu(menuName: "카페모카", menuPrice: "2,000원"),
+                    Menu(menuName: "플랫화이트", menuPrice: "1,000원"),
+                    Menu(menuName: "콜드브루 아메리카노", menuPrice: "1,500원")]
 
     @IBOutlet weak var storeTableView: UITableView!
     
+    @IBOutlet weak var menuAddButton: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
         setStoreTableView()
@@ -32,6 +38,13 @@ class StoreManageVC: UIViewController {
         storeTableView.delegate = self
         storeTableView.dataSource = self
         storeTableView.tableFooterView = UIView()
+    }
+    
+    func setAddButton() {
+        NSLayoutConstraint.activate([
+            menuAddButton.bottomAnchor.constraint(equalTo: storeTableView.frameLayoutGuide.bottomAnchor, constant: -30),
+            menuAddButton.trailingAnchor.constraint(equalTo: storeTableView.frameLayoutGuide.trailingAnchor, constant: -30)
+        ])
     }
 }
 
