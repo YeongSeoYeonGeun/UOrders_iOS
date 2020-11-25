@@ -22,7 +22,6 @@ class MainViewController: UIViewController {
     @IBOutlet weak var orderManageView: UIView!
     @IBOutlet weak var storeManageView: UIView!
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         

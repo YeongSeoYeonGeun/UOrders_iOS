@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A92AD5CC256E2F520098292B /* OrderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A92AD5CB256E2F520098292B /* OrderTableViewCell.swift */; };
 		A951034825626BCC00429FC0 /* OrderManageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A951034725626BCC00429FC0 /* OrderManageVC.swift */; };
 		A98ED9522561714400EB3E8D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A98ED9512561714400EB3E8D /* AppDelegate.swift */; };
 		A98ED9542561714400EB3E8D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A98ED9532561714400EB3E8D /* SceneDelegate.swift */; };
@@ -36,6 +37,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		A92AD5CB256E2F520098292B /* OrderTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderTableViewCell.swift; sourceTree = "<group>"; };
 		A951034725626BCC00429FC0 /* OrderManageVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderManageVC.swift; sourceTree = "<group>"; };
 		A98ED94E2561714400EB3E8D /* UOrders_Owner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UOrders_Owner.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A98ED9512561714400EB3E8D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -78,6 +80,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A92AD5CA256E2F2A0098292B /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				A92AD5CB256E2F520098292B /* OrderTableViewCell.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		A951033C2562424F00429FC0 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
@@ -118,6 +128,7 @@
 		A98ED9502561714400EB3E8D /* UOrders_Owner */ = {
 			isa = PBXGroup;
 			children = (
+				A92AD5CA256E2F2A0098292B /* Views */,
 				A951033D2562425C00429FC0 /* Storyboards */,
 				A951033C2562424F00429FC0 /* ViewControllers */,
 				A98ED9512561714400EB3E8D /* AppDelegate.swift */,
@@ -278,6 +289,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A951034825626BCC00429FC0 /* OrderManageVC.swift in Sources */,
+				A92AD5CC256E2F520098292B /* OrderTableViewCell.swift in Sources */,
 				A98ED9562561714400EB3E8D /* MainViewController.swift in Sources */,
 				A98ED9522561714400EB3E8D /* AppDelegate.swift in Sources */,
 				A98ED9542561714400EB3E8D /* SceneDelegate.swift in Sources */,
