@@ -31,7 +31,7 @@ class OrderManageVC: UIViewController {
     func setOrderTableView() {
         orderTableView.delegate = self
         orderTableView.dataSource = self
-        
+        orderTableView.tableFooterView = UIView()
         orderTableView.estimatedRowHeight =  185
         orderTableView.rowHeight = UITableView.automaticDimension
     }
