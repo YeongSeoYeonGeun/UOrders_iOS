@@ -28,24 +28,24 @@ class MainViewController: UIViewController {
         orderManageView.isHidden = false
         storeManageView.isHidden = true
         
-        orderManageHighlight.backgroundColor = UIColor.orange
-        storeManageHighlight.backgroundColor = UIColor.gray
+        orderManageHighlight.backgroundColor = UIColor(red: 229/255, green: 176/255, blue: 0/255, alpha: 100)
+        storeManageHighlight.backgroundColor = UIColor(red: 219/255, green: 219/255, blue: 219/255, alpha: 100)
     }
     
     @IBAction func orderManageTap(_ sender : UIGestureRecognizer){
         print("order tap touch")
         orderManageView.isHidden = false
         storeManageView.isHidden = true
-        orderManageHighlight.backgroundColor = UIColor.orange
-        storeManageHighlight.backgroundColor = UIColor.gray
+        orderManageHighlight.backgroundColor = UIColor(red: 229/255, green: 176/255, blue: 0/255, alpha: 100)
+        storeManageHighlight.backgroundColor = UIColor(red: 219/255, green: 219/255, blue: 219/255, alpha: 100)
     }
     
     @IBAction func storeManageTap(_ sender : UIGestureRecognizer){
         print("store tap touch")
         orderManageView.isHidden = true
         storeManageView.isHidden = false
-        orderManageHighlight.backgroundColor = UIColor.gray
-        storeManageHighlight.backgroundColor = UIColor.orange
+        orderManageHighlight.backgroundColor = UIColor(red: 219/255, green: 219/255, blue: 219/255, alpha: 100)
+        storeManageHighlight.backgroundColor = UIColor(red: 229/255, green: 176/255, blue: 0/255, alpha: 100)
     }
     
 
