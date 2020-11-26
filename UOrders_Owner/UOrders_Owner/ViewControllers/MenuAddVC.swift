@@ -9,7 +9,8 @@ import UIKit
 
 class MenuAddVC: UIViewController {
     
-
+    @IBOutlet weak var smallCheckBox: UIView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 

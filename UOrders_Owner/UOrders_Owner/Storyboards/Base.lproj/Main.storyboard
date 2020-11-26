@@ -369,10 +369,10 @@
             </objects>
             <point key="canvasLocation" x="3582.608695652174" y="-112.16517857142857"/>
         </scene>
-        <!--View Controller-->
+        <!--Menu AddVC-->
         <scene sceneID="TEa-J6-qBG">
             <objects>
-                <viewController id="fMH-3A-FVE" sceneMemberID="viewController">
+                <viewController id="fMH-3A-FVE" customClass="MenuAddVC" customModule="UOrders_Owner" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ZjU-rg-yTS">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -504,7 +504,21 @@
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Bs5-Ef-amR">
                                                 <rect key="frame" x="0.0" y="0.0" width="118" height="36"/>
+                                                <subviews>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NXZ-Ef-9c0">
+                                                        <rect key="frame" x="10" y="8" width="20" height="20"/>
+                                                        <color key="backgroundColor" systemColor="systemGreenColor"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="20" id="pbi-IG-IXk"/>
+                                                            <constraint firstAttribute="height" constant="20" id="vg3-fI-sNw"/>
+                                                        </constraints>
+                                                    </view>
+                                                </subviews>
                                                 <color key="backgroundColor" systemColor="systemOrangeColor"/>
+                                                <constraints>
+                                                    <constraint firstItem="NXZ-Ef-9c0" firstAttribute="centerY" secondItem="Bs5-Ef-amR" secondAttribute="centerY" id="5MD-JS-7DP"/>
+                                                    <constraint firstItem="NXZ-Ef-9c0" firstAttribute="leading" secondItem="Bs5-Ef-amR" secondAttribute="leading" constant="10" id="BRj-kz-Cj9"/>
+                                                </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3ee-xb-1P1">
                                                 <rect key="frame" x="118" y="0.0" width="118" height="36"/>
@@ -549,6 +563,9 @@
                             <constraint firstItem="5z3-0L-bMo" firstAttribute="top" secondItem="rn5-kS-Flz" secondAttribute="bottom" constant="32" id="y51-YL-kwe"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="smallCheckBox" destination="NXZ-Ef-9c0" id="Ho9-1P-YqD"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Jmd-Uw-IRE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
