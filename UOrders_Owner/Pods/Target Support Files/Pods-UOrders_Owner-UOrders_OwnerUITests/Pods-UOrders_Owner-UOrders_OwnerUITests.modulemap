@@ -1,0 +1,6 @@
+framework module Pods_UOrders_Owner_UOrders_OwnerUITests {
+  umbrella header "Pods-UOrders_Owner-UOrders_OwnerUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}
