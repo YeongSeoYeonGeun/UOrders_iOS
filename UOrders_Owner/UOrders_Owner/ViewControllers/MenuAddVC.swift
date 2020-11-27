@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import BEMCheckBox
 
 class MenuAddVC: UIViewController {
     

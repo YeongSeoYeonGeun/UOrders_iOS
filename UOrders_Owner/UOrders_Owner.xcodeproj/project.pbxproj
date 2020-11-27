@@ -164,12 +164,10 @@
 		A98ED9502561714400EB3E8D /* UOrders_Owner */ = {
 			isa = PBXGroup;
 			children = (
+				A98F1CB6256FC6E400E7AC8B /* SupportingFiles */,
 				A92AD5CA256E2F2A0098292B /* Views */,
 				A951033D2562425C00429FC0 /* Storyboards */,
 				A951033C2562424F00429FC0 /* ViewControllers */,
-				A98ED9512561714400EB3E8D /* AppDelegate.swift */,
-				A98ED9532561714400EB3E8D /* SceneDelegate.swift */,
-				A98ED95A2561714700EB3E8D /* Assets.xcassets */,
 				A98ED95C2561714700EB3E8D /* LaunchScreen.storyboard */,
 				A98ED95F2561714700EB3E8D /* Info.plist */,
 			);
@@ -192,6 +190,16 @@
 				A98ED9752561714700EB3E8D /* Info.plist */,
 			);
 			path = UOrders_OwnerUITests;
+			sourceTree = "<group>";
+		};
+		A98F1CB6256FC6E400E7AC8B /* SupportingFiles */ = {
+			isa = PBXGroup;
+			children = (
+				A98ED9512561714400EB3E8D /* AppDelegate.swift */,
+				A98ED9532561714400EB3E8D /* SceneDelegate.swift */,
+				A98ED95A2561714700EB3E8D /* Assets.xcassets */,
+			);
+			path = SupportingFiles;
 			sourceTree = "<group>";
 		};
 		F0305A38B079A7CA41FB78FA /* Pods */ = {
