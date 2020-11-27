@@ -1,0 +1,21 @@
+#Uncomment the next line to define a global platform for your project
+# platform :ios, '9.0'
+
+target 'UOrders_Owner' do
+  # Comment the next line if you don't want to use dynamic frameworks
+  use_frameworks!
+
+  # Pods for UOrders_Owner
+
+  pod 'BEMCheckBox'
+
+  target 'UOrders_OwnerTests' do
+    inherit! :search_paths
+    # Pods for testing
+  end
+
+  target 'UOrders_OwnerUITests' do
+    # Pods for testing
+  end
+
+end
