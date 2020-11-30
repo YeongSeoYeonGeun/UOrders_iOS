@@ -23,7 +23,7 @@ class OrderManageVC: UIViewController {
                      ]
     
     
-    @IBOutlet weak var orderCollectionView: UICollectionView!
+    @IBOutlet var orderCollectionView: UICollectionView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,24 +31,22 @@ class OrderManageVC: UIViewController {
     }
     
     func setOrderTableView() {
-        orderCollectionView.delegate = self
-        orderCollectionView.dataSource = self
         
         let orderLayout = UICollectionViewFlowLayout()
         orderLayout.minimumLineSpacing = 0
         orderLayout.minimumInteritemSpacing = 0
         orderLayout.sectionInset = UIEdgeInsets.zero
+//        orderLayout.itemSize = CGSize(width: self.view.frame.width, height: 50)
         
-        let collectionWidth = UIScreen.main.bounds.width
-        orderLayout.itemSize = CGSize(width : collectionWidth, height: collectionWidth * 0.7)
-        self.orderCollectionView.collectionViewLayout = orderLayout
         
+        orderCollectionView.delegate = self
+        orderCollectionView.dataSource = self
         
     }
 
 }
 
-extension OrderManageVC : UICollectionViewDelegate, UICollectionViewDataSource {
+extension OrderManageVC : UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return 1
     }
@@ -64,38 +62,4 @@ extension OrderManageVC : UICollectionViewDelegate, UICollectionViewDataSource {
         return self.orderList.count
     }
     
-    
 }
-
-
-//class HomeViewController: TaskManageViewController {
-//    private var recommendedProductSizingCell: UIView!
-//
-//    override func viewDidLoad() {
-//        super.viewDidLoad()
-//        recommendedProductSizingCell = Bundle.main.loadNibNamed(String(describing: RecommendedProductCollectionViewCell.self), owner: self, options: nil)?.first as? UIView
-//    }
-//
-//    func collectionView(_ collectionView: UICollectionView,
-//                        layout collectionViewLayout: UICollectionViewLayout,
-//                        sizeForItemAt indexPath: IndexPath) -> CGSize {
-//        switch collectionView {
-//        case personalizedRecommendationCollectionView:
-//            let layout = personalizedRecommendationCollectionView.collectionViewLayout as! UICollectionViewFlowLayout
-//            let sectionInset = layout.sectionInset
-//            var margin: CGFloat = sectionInset.left + sectionInset.right
-//            let numberOfItems = self.collectionView(personalizedRecommendationCollectionView, numberOfItemsInSection: indexPath.section)
-//            let minimumLineSpacing = self.collectionView(collectionView, layout: layout, minimumLineSpacingForSectionAt: indexPath.section)
-//            margin += CGFloat(numberOfItems - 1) * minimumLineSpacing
-//            let width: CGFloat = (view.frame.width - margin) / CGFloat(numberOfItems)
-//
-//            recommendedProductSizingCell.imageViewWidthConstraint.constant = width
-//
-//            let fittingSize =  recommendedProductSizingCell.systemLayoutSizeFitting(UIView.layoutFittingCompressedSize)
-//
-//            maxRecommendedProductCellHeight = max(maxRecommendedProductCellHeight, fittingSize.height + sectionInset.top + sectionInset.bottom)
-//            personalizedRecommendationCollectionViewHeightConstraint.constant = maxRecommendedProductCellHeight
-//
-//            return CGSize(width: width, height: fittingSize.height)
-//    }
-//}
