@@ -33,11 +33,12 @@ class OrderManageVC: UIViewController {
         orderCollectionView.dataSource = self
         orderCollectionView.delegate = self
         
+        
         let orderLayout = UICollectionViewFlowLayout()
         orderLayout.minimumLineSpacing = 0
         orderLayout.minimumInteritemSpacing = 0
         orderLayout.sectionInset = UIEdgeInsets.zero
-        orderLayout.itemSize = CGSize(width: self.view.frame.width, height: 200)
+        orderLayout.itemSize = CGSize(width: self.view.frame.width, height : 200)
         orderCollectionView.collectionViewLayout = orderLayout
     }
 
@@ -49,7 +50,9 @@ extension OrderManageVC : UICollectionViewDelegate, UICollectionViewDataSource{
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "orderCollectionViewCell", for: indexPath)
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "orderCollectionViewCell", for: indexPath) as! OrderCollectionViewCell
+        
+        
         
         return cell
     }
