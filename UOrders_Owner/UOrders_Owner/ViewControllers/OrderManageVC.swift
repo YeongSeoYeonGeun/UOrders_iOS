@@ -21,9 +21,8 @@ class OrderManageVC: UIViewController {
                      Order(customerName : "시연 님", orderNumber: "(No. 17)", leftTime: "13 분"),
                      Order(customerName : "시연 님", orderNumber: "(No. 17)", leftTime: "13 분")
                      ]
-    
-    
-    @IBOutlet var orderCollectionView: UICollectionView!
+
+    @IBOutlet weak var orderCollectionView: UICollectionView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,28 +30,25 @@ class OrderManageVC: UIViewController {
     }
     
     func setOrderTableView() {
+        orderCollectionView.dataSource = self
+        orderCollectionView.delegate = self
         
         let orderLayout = UICollectionViewFlowLayout()
         orderLayout.minimumLineSpacing = 0
         orderLayout.minimumInteritemSpacing = 0
         orderLayout.sectionInset = UIEdgeInsets.zero
-//        orderLayout.itemSize = CGSize(width: self.view.frame.width, height: 50)
-        
-        
-        orderCollectionView.delegate = self
-        orderCollectionView.dataSource = self
-        
+        orderLayout.itemSize = CGSize(width: self.view.frame.width, height: 200)
+        orderCollectionView.collectionViewLayout = orderLayout
     }
 
 }
 
-extension OrderManageVC : UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+extension OrderManageVC : UICollectionViewDelegate, UICollectionViewDataSource{
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 1
+        return 1;
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "orderCollectionViewCell", for: indexPath)
         
         return cell
@@ -61,5 +57,27 @@ extension OrderManageVC : UICollectionViewDelegate, UICollectionViewDataSource, 
     func numberOfSections(in collectionView: UICollectionView) -> Int {
         return self.orderList.count
     }
-    
 }
+
+//extension OrderManageVC : UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+//    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+//        return 1
+//    }
+//    
+//    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+//        
+//        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "orderCollectionViewCell", for: indexPath)
+//        
+//        return cell
+//    }
+//    
+//    func numberOfSections(in collectionView: UICollectionView) -> Int {
+//        return self.orderList.count
+//    }
+//    
+//    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+//        
+//        return CGSize(width: orderCollectionView.frame.width, height: 200)
+//    }
+//}
+

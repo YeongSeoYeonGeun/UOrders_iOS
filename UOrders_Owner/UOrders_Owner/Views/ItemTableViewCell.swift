@@ -1,18 +1,14 @@
 //
-//  OrderTableViewCell.swift
+//  ItemTableViewCell.swift
 //  UOrders_Owner
 //
-//  Created by SEONYOUNG LEE on 2020/11/25.
+//  Created by SEONYOUNG LEE on 2020/12/01.
 //
 
 import UIKit
 
-class OrderTableViewCell: UITableViewCell {
+class ItemTableViewCell: UITableViewCell {
 
-    @IBOutlet weak var customerNameLabel: UILabel!
-    @IBOutlet weak var orderNumberLabel: UILabel!
-    @IBOutlet weak var leftTimeLabel: UILabel!
-    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

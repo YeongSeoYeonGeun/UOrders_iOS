@@ -7,6 +7,13 @@
 
 import UIKit
 
-class OrderCollectionViewCell: UICollectionViewCell {
+class OrderCollectionViewCell: UICollectionViewCell{
+    @IBOutlet weak var customerNameLabel: UILabel!
+    @IBOutlet weak var orderNumberLabel: UILabel!
+    @IBOutlet weak var leftTimeLabel: UILabel!
     
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        // Initialization code
+    }
 }
