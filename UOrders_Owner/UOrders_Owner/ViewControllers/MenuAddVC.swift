@@ -23,7 +23,12 @@ class MenuAddVC: UIViewController {
         menuAddButton.layer.cornerRadius = 4
         super.viewDidLoad()
     }
-
+    
+    @IBAction func showMenuAdd(_ sender: Any) {
+        print("segue action")
+        self.performSegue(withIdentifier: "showMenuAdd", sender: self)
+    }
+    
 }
 
 extension MenuAddVC {
