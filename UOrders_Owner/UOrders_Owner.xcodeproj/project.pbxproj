@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		14D64EF657BA9EEAA878C31B /* Pods_UOrders_OwnerTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 68CA9CCCE2807A363144CC4A /* Pods_UOrders_OwnerTests.framework */; };
 		A8FCE21B63355022C70770D1 /* Pods_UOrders_Owner.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E65D62CEFE46BFFF2A244E2 /* Pods_UOrders_Owner.framework */; };
-		A92AD5CC256E2F520098292B /* OrderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A92AD5CB256E2F520098292B /* OrderTableViewCell.swift */; };
+		A9176728257660F2009D8D53 /* ItemTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9176727257660F2009D8D53 /* ItemTableViewCell.swift */; };
 		A92AD5DA256E3E2E0098292B /* StoreManageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A92AD5D9256E3E2E0098292B /* StoreManageVC.swift */; };
 		A92AD5E8256E44400098292B /* StoreTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A92AD5E7256E44400098292B /* StoreTableViewCell.swift */; };
 		A951034825626BCC00429FC0 /* OrderManageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A951034725626BCC00429FC0 /* OrderManageVC.swift */; };
@@ -22,6 +22,7 @@
 		A98ED9692561714700EB3E8D /* UOrders_OwnerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A98ED9682561714700EB3E8D /* UOrders_OwnerTests.swift */; };
 		A98ED9742561714700EB3E8D /* UOrders_OwnerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A98ED9732561714700EB3E8D /* UOrders_OwnerUITests.swift */; };
 		A98F1CB2256FC2A300E7AC8B /* MenuAddVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A98F1CB1256FC2A300E7AC8B /* MenuAddVC.swift */; };
+		A9CA76562574B7B900D7441D /* OrderCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9CA76552574B7B900D7441D /* OrderCollectionViewCell.swift */; };
 		B1CD2C4F53C1DF88E9B94DDA /* Pods_UOrders_Owner_UOrders_OwnerUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8597A975C7D2F84F8C78F713 /* Pods_UOrders_Owner_UOrders_OwnerUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -50,7 +51,7 @@
 		A3A4E68FF7A27CAF20A1ED41 /* Pods-UOrders_Owner-UOrders_OwnerUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UOrders_Owner-UOrders_OwnerUITests.release.xcconfig"; path = "Target Support Files/Pods-UOrders_Owner-UOrders_OwnerUITests/Pods-UOrders_Owner-UOrders_OwnerUITests.release.xcconfig"; sourceTree = "<group>"; };
 		A3E0FB5065565E3ABC5E807A /* Pods-UOrders_Owner-UOrders_OwnerUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UOrders_Owner-UOrders_OwnerUITests.debug.xcconfig"; path = "Target Support Files/Pods-UOrders_Owner-UOrders_OwnerUITests/Pods-UOrders_Owner-UOrders_OwnerUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		A723E882E2A17F239AD419CB /* Pods-UOrders_OwnerTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UOrders_OwnerTests.debug.xcconfig"; path = "Target Support Files/Pods-UOrders_OwnerTests/Pods-UOrders_OwnerTests.debug.xcconfig"; sourceTree = "<group>"; };
-		A92AD5CB256E2F520098292B /* OrderTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderTableViewCell.swift; sourceTree = "<group>"; };
+		A9176727257660F2009D8D53 /* ItemTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemTableViewCell.swift; sourceTree = "<group>"; };
 		A92AD5D9256E3E2E0098292B /* StoreManageVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreManageVC.swift; sourceTree = "<group>"; };
 		A92AD5E7256E44400098292B /* StoreTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreTableViewCell.swift; sourceTree = "<group>"; };
 		A951034725626BCC00429FC0 /* OrderManageVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderManageVC.swift; sourceTree = "<group>"; };
@@ -69,6 +70,7 @@
 		A98ED9732561714700EB3E8D /* UOrders_OwnerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UOrders_OwnerUITests.swift; sourceTree = "<group>"; };
 		A98ED9752561714700EB3E8D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A98F1CB1256FC2A300E7AC8B /* MenuAddVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuAddVC.swift; sourceTree = "<group>"; };
+		A9CA76552574B7B900D7441D /* OrderCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderCollectionViewCell.swift; sourceTree = "<group>"; };
 		C8A08F8E9EF936CB92E41C9A /* Pods-UOrders_Owner.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UOrders_Owner.release.xcconfig"; path = "Target Support Files/Pods-UOrders_Owner/Pods-UOrders_Owner.release.xcconfig"; sourceTree = "<group>"; };
 		ED7C5BB0F25FD687ED879601 /* Pods-UOrders_OwnerTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UOrders_OwnerTests.release.xcconfig"; path = "Target Support Files/Pods-UOrders_OwnerTests/Pods-UOrders_OwnerTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -114,8 +116,9 @@
 		A92AD5CA256E2F2A0098292B /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				A92AD5CB256E2F520098292B /* OrderTableViewCell.swift */,
 				A92AD5E7256E44400098292B /* StoreTableViewCell.swift */,
+				A9CA76552574B7B900D7441D /* OrderCollectionViewCell.swift */,
+				A9176727257660F2009D8D53 /* ItemTableViewCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -454,8 +457,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				A951034825626BCC00429FC0 /* OrderManageVC.swift in Sources */,
+				A9CA76562574B7B900D7441D /* OrderCollectionViewCell.swift in Sources */,
+				A9176728257660F2009D8D53 /* ItemTableViewCell.swift in Sources */,
 				A98F1CB2256FC2A300E7AC8B /* MenuAddVC.swift in Sources */,
-				A92AD5CC256E2F520098292B /* OrderTableViewCell.swift in Sources */,
 				A98ED9562561714400EB3E8D /* MainVC.swift in Sources */,
 				A92AD5DA256E3E2E0098292B /* StoreManageVC.swift in Sources */,
 				A98ED9522561714400EB3E8D /* AppDelegate.swift in Sources */,
