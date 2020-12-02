@@ -19,13 +19,23 @@ class MyPageVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        let gesture = UITapGestureRecognizer(target: self, action: #selector(MyPageVC.goProfit))
+        self.profitCheckView.addGestureRecognizer(gesture)
+        
         setView()
     }
     
+    @objc func goProfit(sender:UIGestureRecognizer){
+        let storyboard  = UIStoryboard(name: "MyPage", bundle: nil)
+        let vc = storyboard.instantiateViewController(withIdentifier: "profitVC") as! ProfitVC
+        
+        self.present(vc, animated: true, completion: nil)
+        
+    }
+
     func setView(){
         // profile 동그랗게
-        
         cafeImageBorderView.layer.cornerRadius =        cafeImageView.frame.height/2
         cafeImageView.layer.cornerRadius =        cafeImageView.frame.height/2
         cafeImageView.layer.borderWidth = 1
