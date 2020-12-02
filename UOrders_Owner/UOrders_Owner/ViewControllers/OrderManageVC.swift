@@ -16,10 +16,10 @@ struct Order {
 class OrderManageVC: UIViewController {
     
     let orderList = [Order(customerName : "시연 님", orderNumber: "(No. 17)", leftTime: "13 분"),
-                     Order(customerName : "시연 님", orderNumber: "(No. 17)", leftTime: "13 분"),
-                     Order(customerName : "시연 님", orderNumber: "(No. 17)", leftTime: "13 분"),
-                     Order(customerName : "시연 님", orderNumber: "(No. 17)", leftTime: "13 분"),
-                     Order(customerName : "시연 님", orderNumber: "(No. 17)", leftTime: "13 분")
+                     Order(customerName : "종근 님", orderNumber: "(No. 18)", leftTime: "25 분"),
+                     Order(customerName : "영서 님", orderNumber: "(No. 19)", leftTime: "34 분"),
+                     Order(customerName : "선영 님", orderNumber: "(No. 20)", leftTime: "40 분"),
+                     Order(customerName : "시연 님", orderNumber: "(No. 21)", leftTime: "45 분")
                      ]
 
     @IBOutlet weak var orderCollectionView: UICollectionView!
@@ -46,13 +46,15 @@ class OrderManageVC: UIViewController {
 
 extension OrderManageVC : UICollectionViewDelegate, UICollectionViewDataSource{
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 1;
+        return self.orderList.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "orderCollectionViewCell", for: indexPath) as! OrderCollectionViewCell
         
-        
+        cell.customerNameLabel.text = orderList[indexPath.row].customerName
+        cell.orderNumberLabel.text = orderList[indexPath.row].orderNumber
+        cell.leftTimeLabel.text = orderList[indexPath.row].leftTime
         
         return cell
     }
