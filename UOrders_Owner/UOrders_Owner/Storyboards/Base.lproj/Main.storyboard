@@ -14,18 +14,18 @@
             <objects>
                 <viewController id="8qR-1y-KWv" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="3nH-sg-BdF">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A5N-hw-KsI">
-                                <rect key="frame" x="115" y="144" width="184" height="41"/>
+                                <rect key="frame" x="115" y="100" width="184" height="41"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="24"/>
                                 <state key="normal" title="주문관리 / 매장관리">
                                     <color key="titleColor" red="0.12941176469999999" green="0.12941176469999999" blue="0.12941176469999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dlH-gs-UW0">
-                                <rect key="frame" x="176.5" y="240" width="61" height="41"/>
+                                <rect key="frame" x="176.5" y="196" width="61" height="41"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="24"/>
                                 <state key="normal" title="Login">
                                     <color key="titleColor" red="0.12941176469999999" green="0.12941176469999999" blue="0.12941176469999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -35,7 +35,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3VE-hN-2rX">
-                                <rect key="frame" x="163" y="337" width="88" height="41"/>
+                                <rect key="frame" x="163" y="293" width="88" height="41"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="24"/>
                                 <state key="normal" title="MyPage">
                                     <color key="titleColor" red="0.12941176469999999" green="0.12941176469999999" blue="0.12941176469999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -56,20 +56,21 @@
                             <constraint firstItem="3VE-hN-2rX" firstAttribute="top" secondItem="dlH-gs-UW0" secondAttribute="bottom" constant="56" id="o9o-ve-Ivd"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="Sng-5g-3eE"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xjy-re-6SR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1477" y="78"/>
+            <point key="canvasLocation" x="2594" y="-696"/>
         </scene>
         <!--Login-->
         <scene sceneID="VBA-nm-SES">
             <objects>
-                <viewControllerPlaceholder storyboardName="Login" id="EEg-pg-Gkh" sceneMemberID="viewController">
+                <viewControllerPlaceholder storyboardName="Login" referencedIdentifier="Login" id="EEg-pg-Gkh" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="ISi-Ba-UBr"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fYI-dt-1aT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2120" y="-49"/>
+            <point key="canvasLocation" x="3227" y="-792"/>
         </scene>
         <!--MyPage-->
         <scene sceneID="f2E-Xz-btO">
@@ -79,7 +80,7 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tmI-Xq-Bk3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2119" y="142"/>
+            <point key="canvasLocation" x="3216" y="-540"/>
         </scene>
         <!--MainVC-->
         <scene sceneID="tne-QT-ifu">
@@ -185,6 +186,16 @@
                                     <segue destination="GL4-dt-J9c" kind="embed" id="3ju-Zd-D5W"/>
                                 </connections>
                             </containerView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GNX-Ob-bj8">
+                                <rect key="frame" x="20" y="51.5" width="50" height="35"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                <state key="normal" title="시여니">
+                                    <color key="titleColor" systemColor="systemPurpleColor"/>
+                                </state>
+                                <connections>
+                                    <segue destination="8qR-1y-KWv" kind="show" id="XFA-MY-YB9"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -200,6 +211,7 @@
                             <constraint firstItem="Zwj-p9-fxx" firstAttribute="top" secondItem="f8J-cb-eDC" secondAttribute="bottom" constant="6.5" id="PDQ-93-CyP"/>
                             <constraint firstItem="f8J-cb-eDC" firstAttribute="top" secondItem="dfL-vc-RsR" secondAttribute="bottom" constant="10" id="Pf7-fz-BqM"/>
                             <constraint firstItem="Zwj-p9-fxx" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="QYd-sM-Rb4"/>
+                            <constraint firstItem="GNX-Ob-bj8" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="RzK-Nm-rec"/>
                             <constraint firstItem="rle-Xe-hqZ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Wr1-u6-cDL"/>
                             <constraint firstItem="dfL-vc-RsR" firstAttribute="top" secondItem="BT8-Nb-0Fr" secondAttribute="bottom" id="XZH-mp-iM9"/>
                             <constraint firstItem="H8P-F0-wg2" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="YQI-PE-GCa"/>
@@ -209,6 +221,7 @@
                             <constraint firstItem="Zwj-p9-fxx" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="eBz-nq-Xwm"/>
                             <constraint firstItem="rle-Xe-hqZ" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="grO-P3-f25"/>
                             <constraint firstItem="uo0-Zm-CWd" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="15" id="tre-tt-c2v"/>
+                            <constraint firstItem="GNX-Ob-bj8" firstAttribute="centerY" secondItem="uo0-Zm-CWd" secondAttribute="centerY" id="woH-3g-lDw"/>
                             <constraint firstAttribute="trailing" secondItem="f8J-cb-eDC" secondAttribute="trailing" id="x5H-MV-EWs"/>
                             <constraint firstItem="f8J-cb-eDC" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="xal-Da-cJm"/>
                             <constraint firstItem="dfL-vc-RsR" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="yVL-eR-OZs"/>
@@ -1206,6 +1219,9 @@
         </systemColor>
         <systemColor name="systemOrangeColor">
             <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemPurpleColor">
+            <color red="0.68627450980392157" green="0.32156862745098042" blue="0.87058823529411766" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemTealColor">
             <color red="0.35294117647058826" green="0.78431372549019607" blue="0.98039215686274506" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

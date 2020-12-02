@@ -32,7 +32,6 @@ class MainVC: UIViewController {
     }
     
     @IBAction func orderManageTap(_ sender: UIGestureRecognizer) {
-        print("order tap touch")
         orderManageView.isHidden = false
         storeManageView.isHidden = true
         orderManageHighlight.backgroundColor = UIColor(red: 229/255, green: 176/255, blue: 0/255, alpha: 100)
@@ -41,7 +40,6 @@ class MainVC: UIViewController {
     
     
     @IBAction func storeManageTap(_ sender : UIGestureRecognizer){
-        print("store tap touch")
         orderManageView.isHidden = true
         storeManageView.isHidden = false
         orderManageHighlight.backgroundColor = UIColor(red: 219/255, green: 219/255, blue: 219/255, alpha: 100)

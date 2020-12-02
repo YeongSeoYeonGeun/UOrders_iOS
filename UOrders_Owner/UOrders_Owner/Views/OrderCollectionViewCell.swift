@@ -26,7 +26,6 @@ class OrderCollectionViewCell: UICollectionViewCell{
     ]
     
     override func awakeFromNib() {
-        print("order collectionview cell")
         super.awakeFromNib()
 //        orderitemTableView.register(ItemTableViewCell.self, forCellReuseIdentifier: "itemTableViewCell")
 //        setItemTableView()
