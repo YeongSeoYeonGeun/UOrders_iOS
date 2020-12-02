@@ -20,12 +20,13 @@
 		A98ED9562561714400EB3E8D /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A98ED9552561714400EB3E8D /* MainVC.swift */; };
 		A98ED9592561714400EB3E8D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A98ED9572561714400EB3E8D /* Main.storyboard */; };
 		A98ED95B2561714700EB3E8D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A98ED95A2561714700EB3E8D /* Assets.xcassets */; };
-		A98ED95E2561714700EB3E8D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A98ED95C2561714700EB3E8D /* LaunchScreen.storyboard */; };
 		A98ED9692561714700EB3E8D /* UOrders_OwnerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A98ED9682561714700EB3E8D /* UOrders_OwnerTests.swift */; };
 		A98ED9742561714700EB3E8D /* UOrders_OwnerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A98ED9732561714700EB3E8D /* UOrders_OwnerUITests.swift */; };
 		A98F1CB2256FC2A300E7AC8B /* MenuAddVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A98F1CB1256FC2A300E7AC8B /* MenuAddVC.swift */; };
 		A9CA76562574B7B900D7441D /* OrderCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9CA76552574B7B900D7441D /* OrderCollectionViewCell.swift */; };
 		B1CD2C4F53C1DF88E9B94DDA /* Pods_UOrders_Owner_UOrders_OwnerUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8597A975C7D2F84F8C78F713 /* Pods_UOrders_Owner_UOrders_OwnerUITests.framework */; };
+		B568BEF82577740B0033C1E5 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B568BEF72577740B0033C1E5 /* Login.storyboard */; };
+		B568BEFD2577784C0033C1E5 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B568BEFC2577784C0033C1E5 /* LoginVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,7 +66,6 @@
 		A98ED9552561714400EB3E8D /* MainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVC.swift; sourceTree = "<group>"; };
 		A98ED9582561714400EB3E8D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A98ED95A2561714700EB3E8D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		A98ED95D2561714700EB3E8D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A98ED95F2561714700EB3E8D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A98ED9642561714700EB3E8D /* UOrders_OwnerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UOrders_OwnerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A98ED9682561714700EB3E8D /* UOrders_OwnerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UOrders_OwnerTests.swift; sourceTree = "<group>"; };
@@ -75,6 +75,8 @@
 		A98ED9752561714700EB3E8D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A98F1CB1256FC2A300E7AC8B /* MenuAddVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuAddVC.swift; sourceTree = "<group>"; };
 		A9CA76552574B7B900D7441D /* OrderCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderCollectionViewCell.swift; sourceTree = "<group>"; };
+		B568BEF72577740B0033C1E5 /* Login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
+		B568BEFC2577784C0033C1E5 /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
 		C8A08F8E9EF936CB92E41C9A /* Pods-UOrders_Owner.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UOrders_Owner.release.xcconfig"; path = "Target Support Files/Pods-UOrders_Owner/Pods-UOrders_Owner.release.xcconfig"; sourceTree = "<group>"; };
 		ED7C5BB0F25FD687ED879601 /* Pods-UOrders_OwnerTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UOrders_OwnerTests.release.xcconfig"; path = "Target Support Files/Pods-UOrders_OwnerTests/Pods-UOrders_OwnerTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -136,6 +138,7 @@
 				A92AD5D9256E3E2E0098292B /* StoreManageVC.swift */,
 				A98F1CB1256FC2A300E7AC8B /* MenuAddVC.swift */,
 				A917677B2577467C009D8D53 /* OrderArriveVC.swift */,
+				B568BEFC2577784C0033C1E5 /* LoginVC.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -144,6 +147,7 @@
 			isa = PBXGroup;
 			children = (
 				A98ED9572561714400EB3E8D /* Main.storyboard */,
+				B568BEF72577740B0033C1E5 /* Login.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -177,7 +181,6 @@
 				A92AD5CA256E2F2A0098292B /* Views */,
 				A951033D2562425C00429FC0 /* Storyboards */,
 				A951033C2562424F00429FC0 /* ViewControllers */,
-				A98ED95C2561714700EB3E8D /* LaunchScreen.storyboard */,
 				A98ED95F2561714700EB3E8D /* Info.plist */,
 			);
 			path = UOrders_Owner;
@@ -332,7 +335,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A98ED95E2561714700EB3E8D /* LaunchScreen.storyboard in Resources */,
+				B568BEF82577740B0033C1E5 /* Login.storyboard in Resources */,
 				A98ED95B2561714700EB3E8D /* Assets.xcassets in Resources */,
 				A98ED9592561714400EB3E8D /* Main.storyboard in Resources */,
 			);
@@ -464,6 +467,7 @@
 			files = (
 				A951034825626BCC00429FC0 /* OrderManageVC.swift in Sources */,
 				A9CA76562574B7B900D7441D /* OrderCollectionViewCell.swift in Sources */,
+				B568BEFD2577784C0033C1E5 /* LoginVC.swift in Sources */,
 				A917677C2577467C009D8D53 /* OrderArriveVC.swift in Sources */,
 				A9176728257660F2009D8D53 /* ItemTableViewCell.swift in Sources */,
 				A98F1CB2256FC2A300E7AC8B /* MenuAddVC.swift in Sources */,
@@ -514,14 +518,6 @@
 				A98ED9582561714400EB3E8D /* Base */,
 			);
 			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		A98ED95C2561714700EB3E8D /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				A98ED95D2561714700EB3E8D /* Base */,
-			);
-			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
