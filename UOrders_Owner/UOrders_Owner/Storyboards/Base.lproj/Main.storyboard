@@ -363,10 +363,10 @@
             </objects>
             <point key="canvasLocation" x="3582.608695652174" y="458.37053571428567"/>
         </scene>
-        <!--View Controller-->
+        <!--Order ArriveVC-->
         <scene sceneID="hmd-FP-7tz">
             <objects>
-                <viewController id="e9w-xN-ctx" sceneMemberID="viewController">
+                <viewController id="e9w-xN-ctx" customClass="OrderArriveVC" customModule="UOrders_Owner" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="NEf-F5-kWm">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -507,23 +507,50 @@
                                 <rect key="frame" x="50" y="162" width="314" height="479"/>
                                 <subviews>
                                     <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="1hi-ZU-Zr3">
-                                        <rect key="frame" x="0.0" y="0.0" width="314" height="479"/>
+                                        <rect key="frame" x="0.0" y="10" width="314" height="469"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <prototypes>
-                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="muh-i5-zPo">
+                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="arrivedItemTableViewCell" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="arrivedItemTableViewCell" id="muh-i5-zPo" customClass="ArrivedItemTableViewCell" customModule="UOrders_Owner" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="28" width="314" height="43.5"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="muh-i5-zPo" id="NHy-Ng-tK1">
                                                     <rect key="frame" x="0.0" y="0.0" width="314" height="43.5"/>
                                                     <autoresizingMask key="autoresizingMask"/>
+                                                    <subviews>
+                                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="cIg-dD-3Jw">
+                                                            <rect key="frame" x="0.0" y="0.5" width="314" height="43"/>
+                                                            <subviews>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="아메리카노" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e8e-1a-vtL">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="78" height="21.5"/>
+                                                                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                                    <color key="textColor" red="0.12984204290000001" green="0.12984612579999999" blue="0.12984395030000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(ICED/REGULAR/GO TO)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VDq-oT-YUN">
+                                                                    <rect key="frame" x="0.0" y="21.5" width="177" height="21.5"/>
+                                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                                    <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                            </subviews>
+                                                            <constraints>
+                                                                <constraint firstItem="VDq-oT-YUN" firstAttribute="leading" secondItem="cIg-dD-3Jw" secondAttribute="leading" id="dxV-0c-bbw"/>
+                                                                <constraint firstItem="e8e-1a-vtL" firstAttribute="leading" secondItem="cIg-dD-3Jw" secondAttribute="leading" id="hsB-Al-2WQ"/>
+                                                            </constraints>
+                                                        </stackView>
+                                                    </subviews>
+                                                    <constraints>
+                                                        <constraint firstItem="cIg-dD-3Jw" firstAttribute="leading" secondItem="NHy-Ng-tK1" secondAttribute="leading" id="QJE-nd-wY1"/>
+                                                        <constraint firstAttribute="trailing" secondItem="cIg-dD-3Jw" secondAttribute="trailing" id="Scw-Yn-sY1"/>
+                                                        <constraint firstItem="cIg-dD-3Jw" firstAttribute="centerY" secondItem="NHy-Ng-tK1" secondAttribute="centerY" id="eEr-2i-fhY"/>
+                                                    </constraints>
                                                 </tableViewCellContentView>
                                             </tableViewCell>
                                         </prototypes>
                                     </tableView>
                                 </subviews>
-                                <color key="backgroundColor" systemColor="systemYellowColor"/>
                                 <constraints>
-                                    <constraint firstItem="1hi-ZU-Zr3" firstAttribute="top" secondItem="E1F-na-QNK" secondAttribute="top" id="2D5-2v-BHc"/>
+                                    <constraint firstItem="1hi-ZU-Zr3" firstAttribute="top" secondItem="E1F-na-QNK" secondAttribute="top" constant="10" id="2D5-2v-BHc"/>
                                     <constraint firstAttribute="trailing" secondItem="1hi-ZU-Zr3" secondAttribute="trailing" id="60W-Bz-uIt"/>
                                     <constraint firstItem="1hi-ZU-Zr3" firstAttribute="leading" secondItem="E1F-na-QNK" secondAttribute="leading" id="VNF-f1-3Bd"/>
                                     <constraint firstAttribute="bottom" secondItem="1hi-ZU-Zr3" secondAttribute="bottom" id="zoQ-sQ-xpb"/>
@@ -554,6 +581,15 @@
                             <constraint firstItem="Jka-pL-nOf" firstAttribute="trailing" secondItem="Iw5-jc-RGF" secondAttribute="trailing" id="uas-2T-xAI"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="acceptOrderButton" destination="MHG-2a-87f" id="4Ps-xK-dyy"/>
+                        <outlet property="arriveMessageLabel" destination="5tI-0Q-ZhY" id="s44-cx-UfK"/>
+                        <outlet property="arrivedItemTableView" destination="1hi-ZU-Zr3" id="H4h-Uj-xDo"/>
+                        <outlet property="leftTimeLabel" destination="Zev-3c-Uaa" id="xUk-Vd-GeL"/>
+                        <outlet property="minusButton" destination="nEu-kn-hCh" id="KWY-ng-4z2"/>
+                        <outlet property="plusButton" destination="g54-6I-gVm" id="BFn-66-3ef"/>
+                        <outlet property="totalPriceLabel" destination="Mtv-qN-pg0" id="Urx-kd-5hd"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UHQ-CF-chP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
