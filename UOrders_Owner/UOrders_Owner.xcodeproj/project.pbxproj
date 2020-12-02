@@ -12,6 +12,9 @@
 		A9176728257660F2009D8D53 /* ItemTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9176727257660F2009D8D53 /* ItemTableViewCell.swift */; };
 		A917677C2577467C009D8D53 /* OrderArriveVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A917677B2577467C009D8D53 /* OrderArriveVC.swift */; };
 		A917678125774997009D8D53 /* ArrivedItemTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A917678025774997009D8D53 /* ArrivedItemTableViewCell.swift */; };
+		A91767862577573C009D8D53 /* TestTableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A91767852577573C009D8D53 /* TestTableVC.swift */; };
+		A917678B25775A14009D8D53 /* TestTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A917678A25775A14009D8D53 /* TestTableViewCell.swift */; };
+		A917679025776189009D8D53 /* OrderListSectionHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = A917678F25776189009D8D53 /* OrderListSectionHeader.xib */; };
 		A92AD5DA256E3E2E0098292B /* StoreManageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A92AD5D9256E3E2E0098292B /* StoreManageVC.swift */; };
 		A92AD5E8256E44400098292B /* StoreTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A92AD5E7256E44400098292B /* StoreTableViewCell.swift */; };
 		A951034825626BCC00429FC0 /* OrderManageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A951034725626BCC00429FC0 /* OrderManageVC.swift */; };
@@ -56,6 +59,9 @@
 		A9176727257660F2009D8D53 /* ItemTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemTableViewCell.swift; sourceTree = "<group>"; };
 		A917677B2577467C009D8D53 /* OrderArriveVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderArriveVC.swift; sourceTree = "<group>"; };
 		A917678025774997009D8D53 /* ArrivedItemTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArrivedItemTableViewCell.swift; sourceTree = "<group>"; };
+		A91767852577573C009D8D53 /* TestTableVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestTableVC.swift; sourceTree = "<group>"; };
+		A917678A25775A14009D8D53 /* TestTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestTableViewCell.swift; sourceTree = "<group>"; };
+		A917678F25776189009D8D53 /* OrderListSectionHeader.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OrderListSectionHeader.xib; sourceTree = "<group>"; };
 		A92AD5D9256E3E2E0098292B /* StoreManageVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreManageVC.swift; sourceTree = "<group>"; };
 		A92AD5E7256E44400098292B /* StoreTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreTableViewCell.swift; sourceTree = "<group>"; };
 		A951034725626BCC00429FC0 /* OrderManageVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderManageVC.swift; sourceTree = "<group>"; };
@@ -124,6 +130,7 @@
 				A9CA76552574B7B900D7441D /* OrderCollectionViewCell.swift */,
 				A9176727257660F2009D8D53 /* ItemTableViewCell.swift */,
 				A917678025774997009D8D53 /* ArrivedItemTableViewCell.swift */,
+				A917678A25775A14009D8D53 /* TestTableViewCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -136,6 +143,7 @@
 				A92AD5D9256E3E2E0098292B /* StoreManageVC.swift */,
 				A98F1CB1256FC2A300E7AC8B /* MenuAddVC.swift */,
 				A917677B2577467C009D8D53 /* OrderArriveVC.swift */,
+				A91767852577573C009D8D53 /* TestTableVC.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -179,6 +187,7 @@
 				A951033C2562424F00429FC0 /* ViewControllers */,
 				A98ED95C2561714700EB3E8D /* LaunchScreen.storyboard */,
 				A98ED95F2561714700EB3E8D /* Info.plist */,
+				A917678F25776189009D8D53 /* OrderListSectionHeader.xib */,
 			);
 			path = UOrders_Owner;
 			sourceTree = "<group>";
@@ -332,6 +341,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A917679025776189009D8D53 /* OrderListSectionHeader.xib in Resources */,
 				A98ED95E2561714700EB3E8D /* LaunchScreen.storyboard in Resources */,
 				A98ED95B2561714700EB3E8D /* Assets.xcassets in Resources */,
 				A98ED9592561714400EB3E8D /* Main.storyboard in Resources */,
@@ -467,7 +477,9 @@
 				A917677C2577467C009D8D53 /* OrderArriveVC.swift in Sources */,
 				A9176728257660F2009D8D53 /* ItemTableViewCell.swift in Sources */,
 				A98F1CB2256FC2A300E7AC8B /* MenuAddVC.swift in Sources */,
+				A91767862577573C009D8D53 /* TestTableVC.swift in Sources */,
 				A917678125774997009D8D53 /* ArrivedItemTableViewCell.swift in Sources */,
+				A917678B25775A14009D8D53 /* TestTableViewCell.swift in Sources */,
 				A98ED9562561714400EB3E8D /* MainVC.swift in Sources */,
 				A92AD5DA256E3E2E0098292B /* StoreManageVC.swift in Sources */,
 				A98ED9522561714400EB3E8D /* AppDelegate.swift in Sources */,
