@@ -40,9 +40,26 @@ class TestTableVC : UIViewController, UITableViewDelegate, UITableViewDataSource
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        testTableView.delegate = self
-        testTableView.dataSource = self
+        
+        self.testTableView.delegate = self
+        self.testTableView.dataSource = self
+        
+        let nib = UINib(nibName: "OrderListSectionHeader", bundle: nil)
+        self.testTableView.register(nib, forHeaderFooterViewReuseIdentifier: "orderListSectionHeader")
     }
+    
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let headerView = self.testTableView.dequeueReusableHeaderFooterView(withIdentifier: "orderListSectionHeader") as! OrderListSectionHeader
+    
+        headerView.customerName.text = "시연"
+        print(headerView.customerName.text)
+        
+        return headerView
+    }
+    
+//    func tableview(_  tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
+//
+//    }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return self.testOrderList[section].itemList.count
@@ -59,7 +76,7 @@ class TestTableVC : UIViewController, UITableViewDelegate, UITableViewDataSource
     }
     
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        return 20
+        return 47
     }
     
     func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
