@@ -61,8 +61,8 @@ class OrderManageVC : UIViewController {
 extension OrderManageVC : UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         let headerView = self.orderTableView.dequeueReusableHeaderFooterView(withIdentifier: "orderListSectionHeader") as! OrderListSectionHeader
-    
-        headerView.customerName.text = "시연"
+        
+        headerView.customerNameLabel.text = "박종근"
         
         return headerView
     }

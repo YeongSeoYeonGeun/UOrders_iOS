@@ -17,8 +17,10 @@ class OrderListSectionHeader: UITableViewHeaderFooterView {
     }
     */
     
-    let customerName = UILabel()
-    let orderNumber = UILabel()
+    let customerNameLabel = UILabel()
+    let orderNumberLabel = UILabel()
+    let leftTimeLabel = UILabel()
+    
     
     override init(reuseIdentifier: String?) {
         super.init(reuseIdentifier: reuseIdentifier)
@@ -32,18 +34,24 @@ class OrderListSectionHeader: UITableViewHeaderFooterView {
     override func awakeFromNib() {
        super.awakeFromNib()
        //custom logic goes here
-        
         configureContent()
     }
     
     func configureContent() {
-        customerName.translatesAutoresizingMaskIntoConstraints = false
-        orderNumber.translatesAutoresizingMaskIntoConstraints = false
+        customerNameLabel.translatesAutoresizingMaskIntoConstraints = false
+        orderNumberLabel.translatesAutoresizingMaskIntoConstraints = false
+        leftTimeLabel.translatesAutoresizingMaskIntoConstraints = false
+
+        contentView.addSubview(customerNameLabel)
+        contentView.addSubview(orderNumberLabel)
+        contentView.addSubview(leftTimeLabel)
+    }
+    
+    func stackViewFactory(type : NSLayoutConstraint.Axis) -> UIStackView {
+        let row = UIStackView()
+        row.axis = .horizontal
+        row.alignment = .leading
         
-        customerName.text = "박종근"
-        
-        contentView.addSubview(customerName)
-        contentView.addSubview(orderNumber)
-        
+        return row
     }
 }
