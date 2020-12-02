@@ -21,8 +21,9 @@ class LoginVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        loginButton.layer.cornerRadius = 4
     }
+    
     
     @IBAction func loginButtonClicked(_ sender: UIButton) {
 
@@ -31,6 +32,8 @@ class LoginVC: UIViewController {
         // Todo: 통신
         
     }
+    
+    
     
 
     /*
