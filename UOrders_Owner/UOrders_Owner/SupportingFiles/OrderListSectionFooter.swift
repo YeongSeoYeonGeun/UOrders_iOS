@@ -1,5 +1,5 @@
 //
-//  OrderListSectionHeader.swift
+//  OrderListSectionFooter.swift
 //  UOrders_Owner
 //
 //  Created by SEONYOUNG LEE on 2020/12/02.
@@ -7,7 +7,7 @@
 
 import UIKit
 
-class OrderListSectionHeader: UITableViewHeaderFooterView {
+class OrderListSectionFooter : UITableViewHeaderFooterView {
 
     /*
     // Only override draw() if you perform custom drawing.
@@ -16,9 +16,6 @@ class OrderListSectionHeader: UITableViewHeaderFooterView {
         // Drawing code
     }
     */
-    
-    let customerName = UILabel()
-    let orderNumber = UILabel()
     
     override init(reuseIdentifier: String?) {
         super.init(reuseIdentifier: reuseIdentifier)
@@ -32,18 +29,16 @@ class OrderListSectionHeader: UITableViewHeaderFooterView {
     override func awakeFromNib() {
        super.awakeFromNib()
        //custom logic goes here
-        
         configureContent()
     }
     
     func configureContent() {
-        customerName.translatesAutoresizingMaskIntoConstraints = false
-        orderNumber.translatesAutoresizingMaskIntoConstraints = false
-        
-        customerName.text = "박종근"
-        
-        contentView.addSubview(customerName)
-        contentView.addSubview(orderNumber)
-        
+//        customerName.translatesAutoresizingMaskIntoConstraints = false
+//        orderNumber.translatesAutoresizingMaskIntoConstraints = false
+//
+//
+//        contentView.addSubview(customerName)
+//        contentView.addSubview(orderNumber)
     }
+
 }
