@@ -10,6 +10,8 @@
 		14D64EF657BA9EEAA878C31B /* Pods_UOrders_OwnerTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 68CA9CCCE2807A363144CC4A /* Pods_UOrders_OwnerTests.framework */; };
 		A8FCE21B63355022C70770D1 /* Pods_UOrders_Owner.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E65D62CEFE46BFFF2A244E2 /* Pods_UOrders_Owner.framework */; };
 		A9176728257660F2009D8D53 /* ItemTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9176727257660F2009D8D53 /* ItemTableViewCell.swift */; };
+		A917677C2577467C009D8D53 /* OrderArriveVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A917677B2577467C009D8D53 /* OrderArriveVC.swift */; };
+		A917678125774997009D8D53 /* ArrivedItemTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A917678025774997009D8D53 /* ArrivedItemTableViewCell.swift */; };
 		A92AD5DA256E3E2E0098292B /* StoreManageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A92AD5D9256E3E2E0098292B /* StoreManageVC.swift */; };
 		A92AD5E8256E44400098292B /* StoreTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A92AD5E7256E44400098292B /* StoreTableViewCell.swift */; };
 		A951034825626BCC00429FC0 /* OrderManageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A951034725626BCC00429FC0 /* OrderManageVC.swift */; };
@@ -52,6 +54,8 @@
 		A3E0FB5065565E3ABC5E807A /* Pods-UOrders_Owner-UOrders_OwnerUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UOrders_Owner-UOrders_OwnerUITests.debug.xcconfig"; path = "Target Support Files/Pods-UOrders_Owner-UOrders_OwnerUITests/Pods-UOrders_Owner-UOrders_OwnerUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		A723E882E2A17F239AD419CB /* Pods-UOrders_OwnerTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UOrders_OwnerTests.debug.xcconfig"; path = "Target Support Files/Pods-UOrders_OwnerTests/Pods-UOrders_OwnerTests.debug.xcconfig"; sourceTree = "<group>"; };
 		A9176727257660F2009D8D53 /* ItemTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemTableViewCell.swift; sourceTree = "<group>"; };
+		A917677B2577467C009D8D53 /* OrderArriveVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderArriveVC.swift; sourceTree = "<group>"; };
+		A917678025774997009D8D53 /* ArrivedItemTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArrivedItemTableViewCell.swift; sourceTree = "<group>"; };
 		A92AD5D9256E3E2E0098292B /* StoreManageVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreManageVC.swift; sourceTree = "<group>"; };
 		A92AD5E7256E44400098292B /* StoreTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreTableViewCell.swift; sourceTree = "<group>"; };
 		A951034725626BCC00429FC0 /* OrderManageVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderManageVC.swift; sourceTree = "<group>"; };
@@ -119,6 +123,7 @@
 				A92AD5E7256E44400098292B /* StoreTableViewCell.swift */,
 				A9CA76552574B7B900D7441D /* OrderCollectionViewCell.swift */,
 				A9176727257660F2009D8D53 /* ItemTableViewCell.swift */,
+				A917678025774997009D8D53 /* ArrivedItemTableViewCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -130,6 +135,7 @@
 				A951034725626BCC00429FC0 /* OrderManageVC.swift */,
 				A92AD5D9256E3E2E0098292B /* StoreManageVC.swift */,
 				A98F1CB1256FC2A300E7AC8B /* MenuAddVC.swift */,
+				A917677B2577467C009D8D53 /* OrderArriveVC.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -458,8 +464,10 @@
 			files = (
 				A951034825626BCC00429FC0 /* OrderManageVC.swift in Sources */,
 				A9CA76562574B7B900D7441D /* OrderCollectionViewCell.swift in Sources */,
+				A917677C2577467C009D8D53 /* OrderArriveVC.swift in Sources */,
 				A9176728257660F2009D8D53 /* ItemTableViewCell.swift in Sources */,
 				A98F1CB2256FC2A300E7AC8B /* MenuAddVC.swift in Sources */,
+				A917678125774997009D8D53 /* ArrivedItemTableViewCell.swift in Sources */,
 				A98ED9562561714400EB3E8D /* MainVC.swift in Sources */,
 				A92AD5DA256E3E2E0098292B /* StoreManageVC.swift in Sources */,
 				A98ED9522561714400EB3E8D /* AppDelegate.swift in Sources */,
