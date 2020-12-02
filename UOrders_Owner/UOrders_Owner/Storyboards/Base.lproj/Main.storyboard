@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="LRE-AT-Ic5">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="8qR-1y-KWv">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
@@ -9,6 +9,78 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--View Controller-->
+        <scene sceneID="cMQ-Gn-Cus">
+            <objects>
+                <viewController id="8qR-1y-KWv" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="3nH-sg-BdF">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A5N-hw-KsI">
+                                <rect key="frame" x="115" y="144" width="184" height="41"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="24"/>
+                                <state key="normal" title="주문관리 / 매장관리">
+                                    <color key="titleColor" red="0.12941176469999999" green="0.12941176469999999" blue="0.12941176469999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dlH-gs-UW0">
+                                <rect key="frame" x="176.5" y="240" width="61" height="41"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="24"/>
+                                <state key="normal" title="Login">
+                                    <color key="titleColor" red="0.12941176469999999" green="0.12941176469999999" blue="0.12941176469999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="EEg-pg-Gkh" kind="show" id="hJA-vD-L4f"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3VE-hN-2rX">
+                                <rect key="frame" x="163" y="337" width="88" height="41"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="24"/>
+                                <state key="normal" title="MyPage">
+                                    <color key="titleColor" red="0.12941176469999999" green="0.12941176469999999" blue="0.12941176469999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="s3O-uJ-zgI" kind="show" id="qhh-hh-Wle"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="iY9-X9-KHn"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="3VE-hN-2rX" firstAttribute="centerX" secondItem="3nH-sg-BdF" secondAttribute="centerX" id="2N5-zf-LZt"/>
+                            <constraint firstItem="A5N-hw-KsI" firstAttribute="top" secondItem="iY9-X9-KHn" secondAttribute="top" constant="100" id="DTU-ii-5kr"/>
+                            <constraint firstItem="dlH-gs-UW0" firstAttribute="top" secondItem="A5N-hw-KsI" secondAttribute="bottom" constant="55" id="GXC-CY-b1W"/>
+                            <constraint firstItem="A5N-hw-KsI" firstAttribute="centerX" secondItem="3nH-sg-BdF" secondAttribute="centerX" id="gDu-xD-6Bd"/>
+                            <constraint firstItem="dlH-gs-UW0" firstAttribute="centerX" secondItem="3nH-sg-BdF" secondAttribute="centerX" id="ga3-Q4-d5g"/>
+                            <constraint firstItem="3VE-hN-2rX" firstAttribute="top" secondItem="dlH-gs-UW0" secondAttribute="bottom" constant="56" id="o9o-ve-Ivd"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xjy-re-6SR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1477" y="78"/>
+        </scene>
+        <!--Login-->
+        <scene sceneID="VBA-nm-SES">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Login" id="EEg-pg-Gkh" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="ISi-Ba-UBr"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fYI-dt-1aT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2120" y="-49"/>
+        </scene>
+        <!--MyPage-->
+        <scene sceneID="f2E-Xz-btO">
+            <objects>
+                <viewControllerPlaceholder storyboardName="MyPage" id="s3O-uJ-zgI" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="Zgg-ve-L7E"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tmI-Xq-Bk3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2119" y="142"/>
+        </scene>
         <!--MainVC-->
         <scene sceneID="tne-QT-ifu">
             <objects>
