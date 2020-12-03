@@ -8,14 +8,6 @@
 import UIKit
 
 class OrderListSectionHeader: UITableViewHeaderFooterView {
-
-    /*
-    // Only override draw() if you perform custom drawing.
-    // An empty implementation adversely affects performance during animation.
-    override func draw(_ rect: CGRect) {
-        // Drawing code
-    }
-    */
     
     let customerNameLabel = UILabel()
     let orderNumberLabel = UILabel()
@@ -34,7 +26,11 @@ class OrderListSectionHeader: UITableViewHeaderFooterView {
     override func awakeFromNib() {
        super.awakeFromNib()
         self.contentView.backgroundColor = UIColor.white
-        
+        setContentConditon()
+        putContentOnView()
+    }
+    
+    func setContentConditon()  {
         customerNameLabel.text = "승아 님"
         customerNameLabel.font = customerNameLabel.font.withSize(20)
         customerNameLabel.textColor = UIColor(red: 68/255, green: 68/255, blue: 68/255, alpha: 1)
@@ -50,16 +46,13 @@ class OrderListSectionHeader: UITableViewHeaderFooterView {
         leftTimeLabel.text = "25분"
         leftTimeLabel.font = UIFont.boldSystemFont(ofSize: 20)
         leftTimeLabel.textColor = UIColor(red: 11/255, green: 70/255, blue: 60/255, alpha: 1)
-        
-        setContentOnView()
     }
     
-    func setContentOnView() {
+    func putContentOnView() {
         customerNameLabel.translatesAutoresizingMaskIntoConstraints = false
         orderNumberLabel.translatesAutoresizingMaskIntoConstraints = false
         untilCompleteLabel.translatesAutoresizingMaskIntoConstraints = false
         leftTimeLabel.translatesAutoresizingMaskIntoConstraints = false
-        
         
         self.contentView.addSubview(customerNameLabel)
         self.contentView.addSubview(orderNumberLabel)
@@ -79,13 +72,5 @@ class OrderListSectionHeader: UITableViewHeaderFooterView {
         untilCompleteLabel.centerYAnchor.constraint(equalTo: leftTimeLabel.centerYAnchor).isActive = true
         untilCompleteLabel.rightAnchor.constraint(equalTo: leftTimeLabel.leftAnchor, constant: -5).isActive = true
         
-    }
-    
-    func stackViewFactory(type : NSLayoutConstraint.Axis) -> UIStackView {
-        let row = UIStackView()
-        row.axis = .horizontal
-        row.alignment = .leading
-        
-        return row
     }
 }
