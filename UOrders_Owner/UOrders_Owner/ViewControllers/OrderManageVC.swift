@@ -20,22 +20,22 @@ struct Order {
 }
 
 class OrderManageVC : UIViewController {
-    
+
     @IBOutlet weak var orderTableView: UITableView!
     
     let OrderList = [
-        Order(customerName: "시연 님", orderNumber: "(No. 14)",
+        Order(customerName: "시연 님", orderNumber: "(No. 17)",
                   itemList: [Drink(itemName: "아메리카노", itemCondition: "(ICED/REGULAR/GO TO)")],
                   leftTime: "17분"),
-        Order(customerName: "시연 님", orderNumber: "(No. 14)",
+        Order(customerName: "종근 님", orderNumber: "(No. 14)",
                   itemList: [Drink(itemName: "카페라떼", itemCondition: "(ICED/REGULAR/GO TO)"),
                              Drink(itemName: "아메리카노", itemCondition: "(ICED/REGULAR/GO TO)"),
                              Drink(itemName: "플랫화이트", itemCondition: "(ICED/REGULAR/GO TO)")],
-                  leftTime: "17분"),
-        Order(customerName: "시연 님", orderNumber: "(No. 14)",
+                  leftTime: "29분"),
+        Order(customerName: "영서 님", orderNumber: "(No. 39)",
                   itemList: [Drink(itemName: "민트초코", itemCondition: "(ICED/REGULAR/GO TO)"),
                              Drink(itemName: "아메리카노", itemCondition: "(ICED/REGULAR/GO TO)")],
-                  leftTime: "17분")
+                  leftTime: "19분")
     ]
     
     override func viewDidLoad() {
@@ -62,7 +62,9 @@ extension OrderManageVC : UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         let headerView = self.orderTableView.dequeueReusableHeaderFooterView(withIdentifier: "orderListSectionHeader") as! OrderListSectionHeader
         
-        headerView.customerNameLabel.text = "박종근"
+        headerView.customerNameLabel.text = OrderList[section].customerName
+        headerView.orderNumberLabel.text = OrderList[section].orderNumber
+        headerView.leftTimeLabel.text = OrderList[section].leftTime
         
         return headerView
     }
@@ -75,6 +77,11 @@ extension OrderManageVC : UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return self.OrderList[section].itemList.count
+    }
+    
+    func deleteSections(_ sections: IndexSet, with : UITableView.RowAnimation){
+        print("deleteSections")
+    
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
