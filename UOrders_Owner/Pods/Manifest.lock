@@ -1,16 +1,20 @@
 PODS:
+  - Alamofire (5.0.5)
   - BEMCheckBox (1.4.1)
 
 DEPENDENCIES:
+  - Alamofire (~> 5.0.0-beta.7)
   - BEMCheckBox
 
 SPEC REPOS:
   trunk:
+    - Alamofire
     - BEMCheckBox
 
 SPEC CHECKSUMS:
+  Alamofire: df2f8f826963b08b9a870791ad48e07a10090b2e
   BEMCheckBox: 5ba6e37ade3d3657b36caecc35c8b75c6c2b1a4e
 
-PODFILE CHECKSUM: 97dceb812172ff48d96fe0c327611a1ea6b14364
+PODFILE CHECKSUM: f0de6c4c6922ec6f441a91415a3a547cec93e177
 
 COCOAPODS: 1.9.1
