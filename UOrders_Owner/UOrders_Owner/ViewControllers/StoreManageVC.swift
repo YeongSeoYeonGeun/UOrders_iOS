@@ -27,11 +27,14 @@ class StoreManageVC: UIViewController {
                     Menu(menuName: "콜드브루 아메리카노", menuPrice: "1,500원")]
 
     @IBOutlet weak var storeTableView: UITableView!
-    
     @IBOutlet weak var menuAddButton: UIButton!
+    
+    private var handler: ((Result<cafeData, Error>))!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setStoreTableView()
+        API.shared.getStoreManageMain()
     }
     
     func setStoreTableView() {
