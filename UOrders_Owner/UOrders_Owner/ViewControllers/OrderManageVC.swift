@@ -20,7 +20,7 @@ struct Order {
 }
 
 class OrderManageVC : UIViewController {
-    
+
     @IBOutlet weak var orderTableView: UITableView!
     
     let OrderList = [
@@ -77,6 +77,11 @@ extension OrderManageVC : UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return self.OrderList[section].itemList.count
+    }
+    
+    func deleteSections(_ sections: IndexSet, with : UITableView.RowAnimation){
+        print("deleteSections")
+    
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

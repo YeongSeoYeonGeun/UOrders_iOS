@@ -7,11 +7,13 @@
 
 import UIKit
 
-class OrderListSectionFooter : UITableViewHeaderFooterView {
+class OrderListSectionFooter : UITableViewHeaderFooterView, UIGestureRecognizerDelegate {
     
     let orderCompleteBox = UIView()
     let orderCompleteLabel = UILabel()
     let sectionBar = UIView()
+    
+    public var sectionIndex : Int?
 
     override init(reuseIdentifier: String?) {
         super.init(reuseIdentifier: reuseIdentifier)
@@ -27,6 +29,14 @@ class OrderListSectionFooter : UITableViewHeaderFooterView {
         self.contentView.backgroundColor = UIColor.white
         setContentCondition()
         putContentOnView()
+        
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(self.orderCompleteTapAction(recognizer :)))
+        tapGesture.delegate = self
+        orderCompleteBox.addGestureRecognizer(tapGesture)
+    }
+    
+    @objc func orderCompleteTapAction(recognizer : UITapGestureRecognizer){
+        print("touch")
     }
     
     func setContentCondition() {
