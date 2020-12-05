@@ -7,31 +7,46 @@
 
 import UIKit
 
-struct Menu {
-//    var menuPhoto : String
-    var menuName : String
-    var menuPrice : String
-}
+//struct Menu {
+////    var menuPhoto : String
+//    var menuName : String
+//    var menuPrice : String
+//}
 
 class StoreManageVC: UIViewController {
     
-    let menuList = [Menu(menuName: "아메리카노", menuPrice: "1,000원"),
-                    Menu(menuName: "카페라떼", menuPrice: "1,500원"),
-                    Menu(menuName: "카페모카", menuPrice: "2,000원"),
-                    Menu(menuName: "플랫화이트", menuPrice: "1,000원"),
-                    Menu(menuName: "콜드브루 아메리카노", menuPrice: "1,500원"),
-                    Menu(menuName: "아메리카노", menuPrice: "1,000원"),
-                    Menu(menuName: "카페라떼", menuPrice: "1,500원"),
-                    Menu(menuName: "카페모카", menuPrice: "2,000원"),
-                    Menu(menuName: "플랫화이트", menuPrice: "1,000원"),
-                    Menu(menuName: "콜드브루 아메리카노", menuPrice: "1,500원")]
+//    let menuList = [Menu(menuName: "아메리카노", menuPrice: "1,000원"),
+//                    Menu(menuName: "카페라떼", menuPrice: "1,500원"),
+//                    Menu(menuName: "카페모카", menuPrice: "2,000원"),
+//                    Menu(menuName: "플랫화이트", menuPrice: "1,000원"),
+//                    Menu(menuName: "콜드브루 아메리카노", menuPrice: "1,500원"),
+//                    Menu(menuName: "아메리카노", menuPrice: "1,000원"),
+//                    Menu(menuName: "카페라떼", menuPrice: "1,500원"),
+//                    Menu(menuName: "카페모카", menuPrice: "2,000원"),
+//                    Menu(menuName: "플랫화이트", menuPrice: "1,000원"),
+//                    Menu(menuName: "콜드브루 아메리카노", menuPrice: "1,500원")]
 
     @IBOutlet weak var storeTableView: UITableView!
-    
     @IBOutlet weak var menuAddButton: UIButton!
+    
+    private var handler: ((Result<CafeMenuDataResult, Error>) -> Void)!
+    var storeTableData : CafeMenuDataResult!
+    
     override func viewDidLoad() {
-        super.viewDidLoad()
         setStoreTableView()
+        
+        handler = { result in
+                    switch result {
+                    case .success(let successData):
+                        guard successData.self != nil else { return }
+                        self.storeTableData = successData
+                    case .failure(let error):
+                        print("Error", error.localizedDescription)
+                    }
+                }
+        
+        API.shared.getStoreManageMain(completionHandler: handler)
+        super.viewDidLoad()
     }
     
     func setStoreTableView() {
@@ -50,7 +65,13 @@ class StoreManageVC: UIViewController {
 
 extension StoreManageVC : UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return menuList.count
+        if let rowData = self.storeTableData {
+            print(rowData.data.menuInfo.count)
+            return rowData.data.menuInfo.count
+        }else{
+            return 0
+        }
+        
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -58,9 +79,8 @@ extension StoreManageVC : UITableViewDelegate, UITableViewDataSource {
         
         cell.menuPhotoImage.layer.cornerRadius = cell.menuPhotoImage.frame.width/2
         cell.clipsToBounds = true
-        
-        cell.menuNameLabel.text = menuList[indexPath.row].menuName
-        cell.menuPriceLabel.text = menuList[indexPath.row].menuPrice
+        cell.menuNameLabel.text = storeTableData.data.menuInfo[indexPath.row].menuName
+        cell.menuPriceLabel.text = "\(storeTableData.data.menuInfo[indexPath.row].menuPrice)원"
         
         return cell
     }
