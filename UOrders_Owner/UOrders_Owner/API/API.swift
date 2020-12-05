@@ -7,6 +7,7 @@
 
 import Foundation
 import Alamofire
+import SwiftyJSON
 
 class API {
     static let shared : API = API()
@@ -19,24 +20,29 @@ class API {
     
     private init() {}
     
-    func getStoreManageMain() -> {
-        print("in getStoreManageMain")
-        
+    func getStoreManageMain(completionHandler: @escaping (Result<CafeMenuDataResult, Error>) -> Void){
         let requestHeader : HTTPHeaders = [
             "Content-Type" : "application/json",
-        "ownerIndex": "1" ]
+            "ownerIndex": "1" ]
         
-        self.request = AF.request("\(Config.baseURL)/owner/cafe/\(13)", method : .get, headers: requestHeader).responseJSON {
-            response in
-            switch response.result{
-            case .success(let successResult) :
-                print(successResult)
+        let request = AF.request("\(Config.baseURL)/owner/cafe/\(13)", method : .get, headers: requestHeader)
+        request.responseData { response in
+            switch response.result {
+            case .success(let successResult):
+                do{
+                    let decoder : JSONDecoder = JSONDecoder()
+                    decoder.keyDecodingStrategy = .convertFromSnakeCase
+                    
+                    let cafeData = try? decoder.decode(CafeMenuDataResult.self, from: successResult)
+                    completionHandler(.success(cafeData!))
+                }catch {
+                    print(error)
+                }
             case .failure(let error) :
                 print(error)
+                completionHandler(.failure(error))
             }
+            
         }
-
     }
-    
-    
 }

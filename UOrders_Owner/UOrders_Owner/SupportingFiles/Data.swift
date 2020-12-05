@@ -7,15 +7,21 @@
 
 import Foundation
 
-struct cafeData : Decodable {
-    let cafeName : String
-    let cafeLocation : String
-    let menuInfo : [menu]
+struct CafeMenuDataResult : Codable {
+    let message : String
+    let status : Int
+    let data : CafeData
 }
 
-struct menu : Decodable{
+struct CafeData : Codable {
+    let cafeLocation : String
+    let menuInfo : [Menu]
+    let cafeName : String
+}
+
+struct Menu : Codable{
+    let menuImage : String
     let menuIndex : Int
     let menuName : String
     let menuPrice : Int
-    let menuImage : String
 }
