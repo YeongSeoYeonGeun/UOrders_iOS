@@ -33,8 +33,9 @@ class StoreManageVC: UIViewController {
     var storeTableData : CafeMenuDataResult!
     
     override func viewDidLoad() {
+        print("viewDidLoad")
         setStoreTableView()
-        
+        super.viewDidLoad()
         handler = { result in
                     switch result {
                     case .success(let successData):
@@ -46,7 +47,6 @@ class StoreManageVC: UIViewController {
                 }
         
         API.shared.getStoreManageMain(completionHandler: handler)
-        super.viewDidLoad()
     }
     
     func setStoreTableView() {
@@ -61,10 +61,21 @@ class StoreManageVC: UIViewController {
             menuAddButton.trailingAnchor.constraint(equalTo: storeTableView.frameLayoutGuide.trailingAnchor, constant: -30)
         ])
     }
+    
+    @IBAction func showMenuAddVC(_ sender: Any) {
+        guard let vc = self.storyboard?.instantiateViewController(identifier: "MenuAddStoryBoard") else { return }
+        vc.modalTransitionStyle = .flipHorizontal
+        vc.modalPresentationStyle = .overCurrentContext
+        
+        self.parent?.present(vc, animated: false, completion: nil)
+    }
+
 }
 
 extension StoreManageVC : UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        print("numberOfRowsInSection")
+        
         if let rowData = self.storeTableData {
             print(rowData.data.menuInfo.count)
             return rowData.data.menuInfo.count
@@ -75,6 +86,7 @@ extension StoreManageVC : UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        print("cellForRowAt")
         let cell = tableView.dequeueReusableCell(withIdentifier: "storeTableViewCell", for: indexPath) as! StoreTableViewCell
         
         cell.menuPhotoImage.layer.cornerRadius = cell.menuPhotoImage.frame.width/2
@@ -86,6 +98,7 @@ extension StoreManageVC : UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        print("heightForRowAt")
         return 80
     }
 }
