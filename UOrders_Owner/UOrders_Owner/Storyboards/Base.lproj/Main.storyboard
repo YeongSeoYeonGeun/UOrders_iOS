@@ -634,7 +634,8 @@
                                 <state key="normal" title="Button" image="ic-add-menu"/>
                                 <connections>
                                     <action selector="showMenuAdd:" destination="GfB-jY-vD3" eventType="touchUpInside" id="0Ab-3O-KQh"/>
-                                    <segue destination="fMH-3A-FVE" kind="custom" identifier="showMenuAdd" id="8oH-Cn-qlX"/>
+                                    <action selector="showMenuAddVC:" destination="4Gj-jA-6Ic" eventType="touchUpInside" id="0Z5-fT-9Mz"/>
+                                    <action selector="showMenuAddVC:" destination="GfB-jY-vD3" eventType="touchUpInside" id="Fwf-jd-vWN"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -662,7 +663,7 @@
         <!--Menu AddVC-->
         <scene sceneID="TEa-J6-qBG">
             <objects>
-                <viewController id="fMH-3A-FVE" customClass="MenuAddVC" customModule="UOrders_Owner" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MenuAddStoryBoard" id="fMH-3A-FVE" customClass="MenuAddVC" customModule="UOrders_Owner" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ZjU-rg-yTS">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
