@@ -24,7 +24,7 @@
 		A92AD5DA256E3E2E0098292B /* StoreManageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A92AD5D9256E3E2E0098292B /* StoreManageVC.swift */; };
 		A92AD5E8256E44400098292B /* StoreTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A92AD5E7256E44400098292B /* StoreTableViewCell.swift */; };
 		A94BC2CE257A03B3003B1475 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = A94BC2CD257A03B3003B1475 /* Config.swift */; };
-		A94BC2D5257A0BF8003B1475 /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = A94BC2D4257A0BF8003B1475 /* Data.swift */; };
+		A94BC2D5257A0BF8003B1475 /* MainData.swift in Sources */ = {isa = PBXBuildFile; fileRef = A94BC2D4257A0BF8003B1475 /* MainData.swift */; };
 		A94BC2DD257A0D81003B1475 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = A94BC2DC257A0D81003B1475 /* API.swift */; };
 		A98ED9522561714400EB3E8D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A98ED9512561714400EB3E8D /* AppDelegate.swift */; };
 		A98ED9542561714400EB3E8D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A98ED9532561714400EB3E8D /* SceneDelegate.swift */; };
@@ -40,6 +40,7 @@
 		B568BF312577B51D0033C1E5 /* MyPageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B568BF302577B51D0033C1E5 /* MyPageVC.swift */; };
 		B568BF3625780EA00033C1E5 /* ProfitVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B568BF3525780EA00033C1E5 /* ProfitVC.swift */; };
 		B5818CE6257F754200D96980 /* EditCafeInfoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5818CE5257F754200D96980 /* EditCafeInfoVC.swift */; };
+		B5818D07257F97DD00D96980 /* MyPageData.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5818D06257F97DD00D96980 /* MyPageData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -82,7 +83,7 @@
 		A92AD5D9256E3E2E0098292B /* StoreManageVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreManageVC.swift; sourceTree = "<group>"; };
 		A92AD5E7256E44400098292B /* StoreTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreTableViewCell.swift; sourceTree = "<group>"; };
 		A94BC2CD257A03B3003B1475 /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
-		A94BC2D4257A0BF8003B1475 /* Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
+		A94BC2D4257A0BF8003B1475 /* MainData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainData.swift; sourceTree = "<group>"; };
 		A94BC2DC257A0D81003B1475 /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
 		A98ED94E2561714400EB3E8D /* UOrders_Owner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UOrders_Owner.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A98ED9512561714400EB3E8D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -103,6 +104,7 @@
 		B568BF302577B51D0033C1E5 /* MyPageVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageVC.swift; sourceTree = "<group>"; };
 		B568BF3525780EA00033C1E5 /* ProfitVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfitVC.swift; sourceTree = "<group>"; };
 		B5818CE5257F754200D96980 /* EditCafeInfoVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditCafeInfoVC.swift; sourceTree = "<group>"; };
+		B5818D06257F97DD00D96980 /* MyPageData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageData.swift; sourceTree = "<group>"; };
 		C8A08F8E9EF936CB92E41C9A /* Pods-UOrders_Owner.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UOrders_Owner.release.xcconfig"; path = "Target Support Files/Pods-UOrders_Owner/Pods-UOrders_Owner.release.xcconfig"; sourceTree = "<group>"; };
 		ED7C5BB0F25FD687ED879601 /* Pods-UOrders_OwnerTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UOrders_OwnerTests.release.xcconfig"; path = "Target Support Files/Pods-UOrders_OwnerTests/Pods-UOrders_OwnerTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -184,7 +186,6 @@
 				A98F1CB1256FC2A300E7AC8B /* MenuAddVC.swift */,
 				A917677B2577467C009D8D53 /* OrderArriveVC.swift */,
 				B568BEFC2577784C0033C1E5 /* LoginVC.swift */,
-				A91767852577573C009D8D53 /* TestTableVC.swift */,
 				B568BF302577B51D0033C1E5 /* MyPageVC.swift */,
 				B568BF3525780EA00033C1E5 /* ProfitVC.swift */,
 				B5818CE5257F754200D96980 /* EditCafeInfoVC.swift */,
@@ -265,7 +266,8 @@
 				A98ED9532561714400EB3E8D /* SceneDelegate.swift */,
 				A98ED95A2561714700EB3E8D /* Assets.xcassets */,
 				A94BC2CD257A03B3003B1475 /* Config.swift */,
-				A94BC2D4257A0BF8003B1475 /* Data.swift */,
+				A94BC2D4257A0BF8003B1475 /* MainData.swift */,
+				B5818D06257F97DD00D96980 /* MyPageData.swift */,
 			);
 			path = SupportingFiles;
 			sourceTree = "<group>";
@@ -525,6 +527,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B5818D07257F97DD00D96980 /* MyPageData.swift in Sources */,
 				A9CA76562574B7B900D7441D /* OrderCollectionViewCell.swift in Sources */,
 				B568BEFD2577784C0033C1E5 /* LoginVC.swift in Sources */,
 				B568BF3625780EA00033C1E5 /* ProfitVC.swift in Sources */,
@@ -542,7 +545,7 @@
 				A92AD5DA256E3E2E0098292B /* StoreManageVC.swift in Sources */,
 				A98ED9522561714400EB3E8D /* AppDelegate.swift in Sources */,
 				A91767C82577784B009D8D53 /* OrderListSectionHeader.swift in Sources */,
-				A94BC2D5257A0BF8003B1475 /* Data.swift in Sources */,
+				A94BC2D5257A0BF8003B1475 /* MainData.swift in Sources */,
 				A94BC2CE257A03B3003B1475 /* Config.swift in Sources */,
 				A92AD5E8256E44400098292B /* StoreTableViewCell.swift in Sources */,
 				A98ED9542561714400EB3E8D /* SceneDelegate.swift in Sources */,
