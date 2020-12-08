@@ -7,46 +7,33 @@
 
 import UIKit
 
-//struct Menu {
-////    var menuPhoto : String
-//    var menuName : String
-//    var menuPrice : String
-//}
-
 class StoreManageVC: UIViewController {
     
-//    let menuList = [Menu(menuName: "아메리카노", menuPrice: "1,000원"),
-//                    Menu(menuName: "카페라떼", menuPrice: "1,500원"),
-//                    Menu(menuName: "카페모카", menuPrice: "2,000원"),
-//                    Menu(menuName: "플랫화이트", menuPrice: "1,000원"),
-//                    Menu(menuName: "콜드브루 아메리카노", menuPrice: "1,500원"),
-//                    Menu(menuName: "아메리카노", menuPrice: "1,000원"),
-//                    Menu(menuName: "카페라떼", menuPrice: "1,500원"),
-//                    Menu(menuName: "카페모카", menuPrice: "2,000원"),
-//                    Menu(menuName: "플랫화이트", menuPrice: "1,000원"),
-//                    Menu(menuName: "콜드브루 아메리카노", menuPrice: "1,500원")]
-
     @IBOutlet weak var storeTableView: UITableView!
     @IBOutlet weak var menuAddButton: UIButton!
     
-    private var handler: ((Result<CafeMenuDataResult, Error>) -> Void)!
-    var storeTableData : CafeMenuDataResult!
+    var storeTableData : CafeMenuDataResult!{
+        didSet {storeTableView.reloadData()}
+    }
     
     override func viewDidLoad() {
         print("viewDidLoad")
         setStoreTableView()
         super.viewDidLoad()
-        handler = { result in
-                    switch result {
-                    case .success(let successData):
-                        guard successData.self != nil else { return }
-                        self.storeTableData = successData
-                    case .failure(let error):
-                        print("Error", error.localizedDescription)
-                    }
-                }
         
-        API.shared.getStoreManageMain(completionHandler: handler)
+        API.shared.getStoreManageMain() {
+            result in
+            switch result {
+            case .success(let successData) :
+                print(".success")
+                guard successData.self != nil else { return }
+                self.storeTableData = successData
+            case .failure(let error) :
+                print("getStoreManageMain Error", error)
+                
+            }
+        }
+        
     }
     
     func setStoreTableView() {
@@ -69,24 +56,23 @@ class StoreManageVC: UIViewController {
         
         self.parent?.present(vc, animated: false, completion: nil)
     }
-
+    
 }
 
 extension StoreManageVC : UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        print("numberOfRowsInSection")
+       
         if let rowData = self.storeTableData {
-            print(rowData.data.menuInfo.count)
+            print("here")
             return rowData.data.menuInfo.count
         }else{
-            print("0?")
+            print("0")
             return 0
         }
         
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        print("cellForRowAt")
         let cell = tableView.dequeueReusableCell(withIdentifier: "storeTableViewCell", for: indexPath) as! StoreTableViewCell
         
         cell.menuPhotoImage.layer.cornerRadius = cell.menuPhotoImage.frame.width/2
@@ -98,7 +84,6 @@ extension StoreManageVC : UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        print("heightForRowAt")
         return 80
     }
 }
