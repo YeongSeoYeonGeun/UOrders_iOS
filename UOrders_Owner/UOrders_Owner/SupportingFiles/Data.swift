@@ -7,6 +7,7 @@
 
 import Foundation
 
+//매장 관리 데이터
 struct CafeMenuDataResult : Codable {
     let message : String
     let status : Int
@@ -26,6 +27,8 @@ struct Menu : Codable{
     let menuPrice : Int
 }
 
+
+//주문 관리 데이터
 struct OrderListResult : Codable {
     let message : String
     let status : Int
@@ -52,3 +55,8 @@ struct MenuInfo : Codable {
     let menuSize : String
     let menuTakeType : String
 }
+
+
+
+
+
