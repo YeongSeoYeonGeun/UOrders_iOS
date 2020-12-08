@@ -46,5 +46,6 @@ class MainVC: UIViewController {
         storeManageHighlight.backgroundColor = UIColor(red: 229/255, green: 176/255, blue: 0/255, alpha: 100)
     }
     
+    
 }
 
