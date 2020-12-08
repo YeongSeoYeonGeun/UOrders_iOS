@@ -9,8 +9,8 @@ import Foundation
 import Alamofire
 import SwiftyJSON
 
-class API {
-    static let shared : API = API()
+class StoreManageService {
+    static let shared : StoreManageService = StoreManageService()
     
     private var request: DataRequest? {
         didSet {
@@ -42,7 +42,6 @@ class API {
                 print(error)
                 completionHandler(.failure(error))
             }
-            
         }
     }
 }

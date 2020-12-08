@@ -7,40 +7,31 @@
 
 import UIKit
 
-struct Drink {
-    var itemName : String
-    var itemCondition : String
-}
-
-struct Order {
-    var customerName : String
-    var orderNumber : String
-    var itemList : [Drink]
-    var leftTime : String
-}
-
 class OrderManageVC : UIViewController {
 
     @IBOutlet weak var orderTableView: UITableView!
     
-    let OrderList = [
-        Order(customerName: "시연 님", orderNumber: "(No. 17)",
-                  itemList: [Drink(itemName: "아메리카노", itemCondition: "(ICED/REGULAR/GO TO)")],
-                  leftTime: "17분"),
-        Order(customerName: "종근 님", orderNumber: "(No. 14)",
-                  itemList: [Drink(itemName: "카페라떼", itemCondition: "(ICED/REGULAR/GO TO)"),
-                             Drink(itemName: "아메리카노", itemCondition: "(ICED/REGULAR/GO TO)"),
-                             Drink(itemName: "플랫화이트", itemCondition: "(ICED/REGULAR/GO TO)")],
-                  leftTime: "29분"),
-        Order(customerName: "영서 님", orderNumber: "(No. 39)",
-                  itemList: [Drink(itemName: "민트초코", itemCondition: "(ICED/REGULAR/GO TO)"),
-                             Drink(itemName: "아메리카노", itemCondition: "(ICED/REGULAR/GO TO)")],
-                  leftTime: "19분")
-    ]
+    var OrderList : OrderListResult! {
+        didSet {orderTableView.reloadData()}
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setOrderTableView()
+        
+//        OrderManageService.shared.getOrderList() {
+//            result in
+//            switch result {
+//            case .success(let successData) :
+//                print(".success")
+//                print(successData)
+//                guard successData.self != nil  else { return }
+//                self.OrderList = successData
+//                
+//            case .failure(let error) :
+//                print("getOrderList Error ", error)
+//            }
+//        }
     }
     
     func setOrderTableView() {
@@ -60,9 +51,9 @@ extension OrderManageVC : UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         let headerView = self.orderTableView.dequeueReusableHeaderFooterView(withIdentifier: "orderListSectionHeader") as! OrderListSectionHeader
         
-        headerView.customerNameLabel.text = OrderList[section].customerName
-        headerView.orderNumberLabel.text = OrderList[section].orderNumber
-        headerView.leftTimeLabel.text = OrderList[section].leftTime
+        headerView.customerNameLabel.text = OrderList.data.orderInfo[section].orderID
+        headerView.orderNumberLabel.text = String(OrderList.data.orderInfo[section].ticketNumber)
+        headerView.leftTimeLabel.text = OrderList.data.orderInfo[section].orderTime
         
         return headerView
     }
@@ -74,7 +65,7 @@ extension OrderManageVC : UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return self.OrderList[section].itemList.count
+        return OrderList.data.orderInfo[section].menuInfo.count
     }
     
     func deleteSections(_ sections: IndexSet, with : UITableView.RowAnimation){
@@ -85,15 +76,20 @@ extension OrderManageVC : UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "orderItemTableViewCell", for:indexPath) as! OrderItemTableViewCell
         
-        let sectionOrder = OrderList[indexPath.section]
-        cell.itemNameLabel.text = sectionOrder.itemList[indexPath.row].itemName
-        cell.itemConditionLabel.text = sectionOrder.itemList[indexPath.row].itemCondition
+        let sectionOrder = OrderList.data.orderInfo[indexPath.section].menuInfo
+        cell.itemNameLabel.text = sectionOrder[indexPath.row].menuName
+        cell.itemConditionLabel.text = "(" + sectionOrder[indexPath.row].menuTemperature + "/" + sectionOrder[indexPath.row].menuSize + "/" + sectionOrder[indexPath.row].menuTakeType + ")"
         
         return cell
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
-        return self.OrderList.count
+        
+        if let orderList = self.OrderList {
+            return orderList.data.orderInfo.count
+        }else {
+            return 0
+        }
     }
     
     
