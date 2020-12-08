@@ -20,34 +20,29 @@ class MainService {
     
     private init() {}
     
-    func getCafeNameLocation(competionHandler : @escaping (Result<OrderListResult, Error>) -> Void) {
-        
+    func getCafeNameAndLocation(completionHandler: @escaping (Result<CafeDataResult, Error>) -> Void) {
+        let requestHeader : HTTPHeaders = [
+            "Content-Type" : "application/json"
+        ]
+
+        let request = AF.request("\(Config.baseURL)/owner/\(1)", method: .get, headers: requestHeader)
+        request.responseData { response in
+            switch response.result {
+            case .success(let successResult):
+                do{
+                    let decoder : JSONDecoder = JSONDecoder()
+                    decoder.keyDecodingStrategy = .convertFromSnakeCase
+
+                    let cafeData = try? decoder.decode(CafeDataResult.self, from: successResult)
+                    completionHandler(.success(cafeData!))
+                }catch {
+                    print(error)
+                }
+            case .failure(let error) :
+                print(error)
+                completionHandler(.failure(error))
+            }
+        }
+
     }
-    
-//    func getOrderList(completionHandler: @escaping (Result<OrderListResult, Error>) -> Void) {
-//        let requestHeader : HTTPHeaders = [
-//            "Content-Type" : "application/json",
-//            "ownerIndex": "1"
-//        ]
-//
-//        let request = AF.request("\(Config.baseURL)/cafe/order", method: .get, headers: requestHeader)
-//        request.responseData { response in
-//            switch response.result {
-//            case .success(let successResult):
-//                do{
-//                    let decoder : JSONDecoder = JSONDecoder()
-//                    decoder.keyDecodingStrategy = .convertFromSnakeCase
-//
-//                    let orderListData = try? decoder.decode(OrderListResult.self, from: successResult)
-//                    completionHandler(.success(orderListData!))
-//                }catch {
-//                    print(error)
-//                }
-//            case .failure(let error) :
-//                print(error)
-//                completionHandler(.failure(error))
-//            }
-//        }
-//
-//    }
 }
