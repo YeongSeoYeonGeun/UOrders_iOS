@@ -17,11 +17,10 @@ class StoreManageVC: UIViewController {
     }
     
     override func viewDidLoad() {
-        print("viewDidLoad")
         setStoreTableView()
         super.viewDidLoad()
         
-        API.shared.getStoreManageMain() {
+        StoreManageService.shared.getStoreManageMain() {
             result in
             switch result {
             case .success(let successData) :
