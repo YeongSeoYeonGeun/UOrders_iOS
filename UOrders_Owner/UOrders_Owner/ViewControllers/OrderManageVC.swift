@@ -54,8 +54,6 @@ class OrderManageVC : UIViewController {
         let footerNib = UINib(nibName: "OrderListSectionFooter", bundle: nil)
         self.orderTableView.register(footerNib, forHeaderFooterViewReuseIdentifier: "orderListSectionFooter")
     }
-
-
 }
 
 extension OrderManageVC : UITableViewDelegate, UITableViewDataSource {
