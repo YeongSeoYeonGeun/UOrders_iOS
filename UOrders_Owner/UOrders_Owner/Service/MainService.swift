@@ -20,6 +20,10 @@ class MainService {
     
     private init() {}
     
+    func getCafeNameLocation(competionHandler : @escaping (Result<OrderListResult, Error>) -> Void) {
+        
+    }
+    
 //    func getOrderList(completionHandler: @escaping (Result<OrderListResult, Error>) -> Void) {
 //        let requestHeader : HTTPHeaders = [
 //            "Content-Type" : "application/json",
