@@ -8,6 +8,8 @@ target 'UOrders_Owner' do
   # Pods for UOrders_Owner
 
   pod 'BEMCheckBox'
+  pod 'Alamofire', '~> 5.0.0-beta.7'
+  pod 'SwiftyJSON'
 
   target 'UOrders_OwnerTests' do
     inherit! :search_paths
