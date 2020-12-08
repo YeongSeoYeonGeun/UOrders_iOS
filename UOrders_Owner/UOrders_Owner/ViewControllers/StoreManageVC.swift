@@ -75,11 +75,11 @@ class StoreManageVC: UIViewController {
 extension StoreManageVC : UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         print("numberOfRowsInSection")
-        
         if let rowData = self.storeTableData {
             print(rowData.data.menuInfo.count)
             return rowData.data.menuInfo.count
         }else{
+            print("0?")
             return 0
         }
         
