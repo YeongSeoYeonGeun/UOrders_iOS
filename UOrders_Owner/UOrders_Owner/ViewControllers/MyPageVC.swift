@@ -16,6 +16,20 @@ class MyPageVC: UIViewController {
     
     @IBOutlet weak var profitCheckView: UIView!
     
+    @IBAction func clickCafeInfoEdit(_ sender: Any) {
+        
+        let vc = self.storyboard?.instantiateViewController(withIdentifier: "editCafeInfoVC") as! EditCafeInfoVC
+        
+        self.present(vc, animated: true, completion: nil)
+    }
+    
+    @objc func goProfit(sender:UIGestureRecognizer){
+        let vc = self.storyboard?.instantiateViewController(withIdentifier: "profitVC") as! ProfitVC
+
+        self.present(vc, animated: true, completion: nil)
+        
+    }
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,13 +40,7 @@ class MyPageVC: UIViewController {
         setView()
     }
     
-    @objc func goProfit(sender:UIGestureRecognizer){
-        let storyboard  = UIStoryboard(name: "MyPage", bundle: nil)
-        let vc = storyboard.instantiateViewController(withIdentifier: "profitVC") as! ProfitVC
-        
-        self.present(vc, animated: true, completion: nil)
-        
-    }
+  
 
     func setView(){
         // profile 동그랗게

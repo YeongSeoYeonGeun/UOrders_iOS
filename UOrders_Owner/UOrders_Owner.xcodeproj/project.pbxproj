@@ -35,6 +35,7 @@
 		B568BF14257781580033C1E5 /* Login2.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B568BF13257781580033C1E5 /* Login2.storyboard */; };
 		B568BF312577B51D0033C1E5 /* MyPageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B568BF302577B51D0033C1E5 /* MyPageVC.swift */; };
 		B568BF3625780EA00033C1E5 /* ProfitVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B568BF3525780EA00033C1E5 /* ProfitVC.swift */; };
+		B5818CE6257F754200D96980 /* EditCafeInfoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5818CE5257F754200D96980 /* EditCafeInfoVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -93,6 +94,7 @@
 		B568BF13257781580033C1E5 /* Login2.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login2.storyboard; sourceTree = "<group>"; };
 		B568BF302577B51D0033C1E5 /* MyPageVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageVC.swift; sourceTree = "<group>"; };
 		B568BF3525780EA00033C1E5 /* ProfitVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfitVC.swift; sourceTree = "<group>"; };
+		B5818CE5257F754200D96980 /* EditCafeInfoVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditCafeInfoVC.swift; sourceTree = "<group>"; };
 		C8A08F8E9EF936CB92E41C9A /* Pods-UOrders_Owner.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UOrders_Owner.release.xcconfig"; path = "Target Support Files/Pods-UOrders_Owner/Pods-UOrders_Owner.release.xcconfig"; sourceTree = "<group>"; };
 		ED7C5BB0F25FD687ED879601 /* Pods-UOrders_OwnerTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UOrders_OwnerTests.release.xcconfig"; path = "Target Support Files/Pods-UOrders_OwnerTests/Pods-UOrders_OwnerTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -166,6 +168,7 @@
 				A91767852577573C009D8D53 /* TestTableVC.swift */,
 				B568BF302577B51D0033C1E5 /* MyPageVC.swift */,
 				B568BF3525780EA00033C1E5 /* ProfitVC.swift */,
+				B5818CE5257F754200D96980 /* EditCafeInfoVC.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -505,6 +508,7 @@
 				B568BEFD2577784C0033C1E5 /* LoginVC.swift in Sources */,
 				B568BF3625780EA00033C1E5 /* ProfitVC.swift in Sources */,
 				A917677C2577467C009D8D53 /* OrderArriveVC.swift in Sources */,
+				B5818CE6257F754200D96980 /* EditCafeInfoVC.swift in Sources */,
 				A9176728257660F2009D8D53 /* ItemTableViewCell.swift in Sources */,
 				B568BF312577B51D0033C1E5 /* MyPageVC.swift in Sources */,
 				A98F1CB2256FC2A300E7AC8B /* MenuAddVC.swift in Sources */,
