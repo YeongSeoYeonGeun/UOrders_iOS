@@ -37,6 +37,8 @@
 		A98ED9742561714700EB3E8D /* UOrders_OwnerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A98ED9732561714700EB3E8D /* UOrders_OwnerUITests.swift */; };
 		A98F1CB2256FC2A300E7AC8B /* MenuAddVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A98F1CB1256FC2A300E7AC8B /* MenuAddVC.swift */; };
 		A98F2B7D2580D8900016AB09 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A98F2B7C2580D8900016AB09 /* Main.storyboard */; };
+		A98F2B8B2580F2290016AB09 /* MenuAddService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A98F2B8A2580F2290016AB09 /* MenuAddService.swift */; };
+		A98F2B902580F3360016AB09 /* MenuAddData.swift in Sources */ = {isa = PBXBuildFile; fileRef = A98F2B8F2580F3360016AB09 /* MenuAddData.swift */; };
 		A9CA76562574B7B900D7441D /* OrderCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9CA76552574B7B900D7441D /* OrderCollectionViewCell.swift */; };
 		B1CD2C4F53C1DF88E9B94DDA /* Pods_UOrders_Owner_UOrders_OwnerUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8597A975C7D2F84F8C78F713 /* Pods_UOrders_Owner_UOrders_OwnerUITests.framework */; };
 		B568BEFD2577784C0033C1E5 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B568BEFC2577784C0033C1E5 /* LoginVC.swift */; };
@@ -113,6 +115,8 @@
 		A98ED9752561714700EB3E8D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A98F1CB1256FC2A300E7AC8B /* MenuAddVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuAddVC.swift; sourceTree = "<group>"; };
 		A98F2B7C2580D8900016AB09 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		A98F2B8A2580F2290016AB09 /* MenuAddService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuAddService.swift; sourceTree = "<group>"; };
+		A98F2B8F2580F3360016AB09 /* MenuAddData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuAddData.swift; sourceTree = "<group>"; };
 		A9CA76552574B7B900D7441D /* OrderCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderCollectionViewCell.swift; sourceTree = "<group>"; };
 		B568BEFC2577784C0033C1E5 /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
 		B568BF13257781580033C1E5 /* Login2.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login2.storyboard; sourceTree = "<group>"; };
@@ -177,6 +181,7 @@
 				A939B7E4257F853C00DD3481 /* MainService.swift */,
 				B5818D27257F9CB600D96980 /* MyPageService.swift */,
 				B5B273152580CA6A00E52FF8 /* ProfitService.swift */,
+				A98F2B8A2580F2290016AB09 /* MenuAddService.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -207,6 +212,7 @@
 				A939B80F257FA36800DD3481 /* MyPageData.swift */,
 				A939B815257FA46600DD3481 /* MainData.swift */,
 				B5B273102580C97900E52FF8 /* ProfitData.swift */,
+				A98F2B8F2580F3360016AB09 /* MenuAddData.swift */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -572,6 +578,7 @@
 				B5818D28257F9CB600D96980 /* MyPageService.swift in Sources */,
 				B5DBDD80257FF1C600120B48 /* StoreManageData.swift in Sources */,
 				B568BEFD2577784C0033C1E5 /* LoginVC.swift in Sources */,
+				A98F2B902580F3360016AB09 /* MenuAddData.swift in Sources */,
 				B568BF3625780EA00033C1E5 /* ProfitVC.swift in Sources */,
 				A94BC2DD257A0D81003B1475 /* StoreManageService.swift in Sources */,
 				B5B2732525810FD500E52FF8 /* MyPageTableViewContentCell.swift in Sources */,
@@ -598,6 +605,7 @@
 				A98ED9562561714400EB3E8D /* MainVC.swift in Sources */,
 				A917682E2577B2E4009D8D53 /* OrderListSectionFooter.swift in Sources */,
 				A92AD5DA256E3E2E0098292B /* StoreManageVC.swift in Sources */,
+				A98F2B8B2580F2290016AB09 /* MenuAddService.swift in Sources */,
 				A98ED9522561714400EB3E8D /* AppDelegate.swift in Sources */,
 				A91767C82577784B009D8D53 /* OrderListSectionHeader.swift in Sources */,
 				A94BC2CE257A03B3003B1475 /* Config.swift in Sources */,
