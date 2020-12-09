@@ -21,39 +21,12 @@ class MenuAddService {
     
     private init() {}
     
-//    private func convertParameters(newMenuStruct : NewMenu) -> Parameters {
-//        let encoder = JSONEncoder()
-//        encoder.outputFormatting = .prettyPrinted
-//        
-//        
-//        var convertedData = [String]()
-//        var parameter: String = ""
-//        
-//        for(index, value) in newMenuStruct.enumerated(){
-//            let key = "schedule[\(index)]"
-//            var dicdic = value
-//            let jsonData = try? encoder.encode(dicdic)
-//            if let jsonString = String(data: jsonData!, encoding: .utf8) {
-//                parameter = String(jsonString.filter { !" \n\t\r".contains($0) })
-//            }
-//            resultList.append(parameter)
-//        }
-//        return ["scheduleList" : resultList]
-//    }
-    
     func sendMenuAddInfo(newMenu : NewMenu, completionHandler : @escaping (Result<Any, Error>) -> Void) {
         print("menu api service called")
         
         let requestHeader : HTTPHeaders = [
             "Content-Type" : "application/json"
         ]
-        
-//        let encoder = JSONEncoder()
-//
-//        guard let jsonData = try? encoder.encode(newMenu) else {
-//            print("encoding fail")
-//            return
-//        }
         
         print(newMenu)
         let parameterData = newMenu.parameterRepresentation
