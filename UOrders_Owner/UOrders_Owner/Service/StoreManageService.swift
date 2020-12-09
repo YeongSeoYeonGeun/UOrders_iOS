@@ -29,15 +29,14 @@ class StoreManageService {
         request.responseData { response in
             switch response.result {
             case .success(let successResult):
-                do{
-                    let decoder : JSONDecoder = JSONDecoder()
-                    decoder.keyDecodingStrategy = .convertFromSnakeCase
-                    
-                    let cafeData = try? decoder.decode(CafeMenuDataResult.self, from: successResult)
-                    completionHandler(.success(cafeData!))
-                }catch {
-                    print(error)
+                let decoder : JSONDecoder = JSONDecoder()
+                decoder.keyDecodingStrategy = .convertFromSnakeCase
+                
+                guard let cafeData = try? decoder.decode(CafeMenuDataResult.self, from: successResult) else {
+                    print("Decoding Fail")
+                    return
                 }
+                completionHandler(.success(cafeData))
             case .failure(let error) :
                 print(error)
                 completionHandler(.failure(error))

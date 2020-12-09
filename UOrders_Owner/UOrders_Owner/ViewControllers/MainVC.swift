@@ -24,20 +24,20 @@ class MainVC: UIViewController {
     var cafeNameAndLocation : CafeDataResult!
     
     override func viewDidLoad() {
+        print("Main")
         super.viewDidLoad()
         
         MainService.shared.getCafeNameAndLocation() {
             result in
             switch result {
             case .success(let successData) :
-                print("*************** Main success ***************")
+                print("getCafeNameAndLocation success")
                 guard successData.self != nil else { return }
                 self.cafeNameAndLocation = successData
                 self.cafeNameLabel.text = self.cafeNameAndLocation.data.cafeName
                 self.cafeLoactionLabel.text = self.cafeNameAndLocation.data.cafeLocation
                 
             case .failure(let error) :
-                print("*************** Main fail ***************")
                 print("getCafeNameAndLocation error ", error)
                 
             }

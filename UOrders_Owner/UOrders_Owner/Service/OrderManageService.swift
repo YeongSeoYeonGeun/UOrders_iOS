@@ -26,19 +26,19 @@ class OrderManageService {
             "ownerIndex": "1"
         ]
         
-        let request = AF.request("\(Config.baseURL)/orders/main", method: .get, headers: requestHeader)
-        request.responseData { response in
-            switch response.result {
+        let request = AF.request("\(Config.baseURL)/orders/main", method: .get, encoding: JSONEncoding.default, headers: requestHeader)
+        
+        request.responseData { dataResponse in
+            switch dataResponse.result {
             case .success(let successResult):
-                do{
-                    let decoder : JSONDecoder = JSONDecoder()
-                    decoder.keyDecodingStrategy = .convertFromSnakeCase
-                    print(JSON(successResult))
-                    let orderListData = try? decoder.decode(OrderListResult.self, from: successResult)
-                    completionHandler(.success(orderListData!))
-                }catch {
-                    print(error)
+                let orderDecoder : JSONDecoder = JSONDecoder()
+                orderDecoder.keyDecodingStrategy = .convertFromSnakeCase
+                
+                guard let orderListData = try? orderDecoder.decode(OrderListResult.self, from: successResult) else {
+                    print("Decoding Fail")
+                    return
                 }
+                completionHandler(.success(orderListData))
             case .failure(let error) :
                 print(error)
                 completionHandler(.failure(error))
