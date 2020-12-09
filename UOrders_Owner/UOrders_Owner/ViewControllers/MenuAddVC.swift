@@ -10,6 +10,9 @@ import BEMCheckBox
 
 class MenuAddVC: UIViewController {
     
+    @IBOutlet weak var menuNameTextField: UITextField!
+    @IBOutlet weak var menuPriceTextField: UITextField!
+    
     @IBOutlet var wholeContainerView: UIView!
     @IBOutlet weak var smallCheckBoxArea: UIView!
     @IBOutlet weak var regularCheckBoxArea: UIView!
@@ -19,10 +22,54 @@ class MenuAddVC: UIViewController {
     @IBOutlet weak var soldoutSwitch: UISwitch!
     @IBOutlet weak var menuAddButton: UIView!
     
+    @IBOutlet weak var menuImage: UIImageView!
+    @IBOutlet weak var searchPhotoButton: UIImageView!
+    
+    let picker = UIImagePickerController()
+    
     override func viewDidLoad() {
         setCheckBox()
         menuAddButton.layer.cornerRadius = 4
+        
+        menuNameTextField.delegate = self
+        menuPriceTextField.delegate = self
+        
+        let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(searchImageAction))
+        searchPhotoButton.addGestureRecognizer(tapGestureRecognizer)
+        searchPhotoButton.isUserInteractionEnabled = true
+        
+        picker.delegate = self
+        
         super.viewDidLoad()
+    }
+    
+    @objc func searchImageAction(sender : UITapGestureRecognizer) {
+        
+        let alert =  UIAlertController(title: "사진", message: "메뉴 사진 선택", preferredStyle: .actionSheet)
+        let library =  UIAlertAction(title: "사진앨범", style: .default) { (action) in self.openLibrary() }
+        let camera =  UIAlertAction(title: "카메라", style: .default) { (action) in self.openCamera() }
+        let cancel = UIAlertAction(title: "취소", style: .cancel, handler: nil)
+        
+        alert.addAction(library)
+        alert.addAction(camera)
+        alert.addAction(cancel)
+        
+        present(alert, animated: true, completion: nil)
+    }
+    
+    func openLibrary(){
+        picker.sourceType = .photoLibrary
+        present(picker, animated: false, completion: nil)
+    }
+    
+    func openCamera(){
+        if(UIImagePickerController .isSourceTypeAvailable(.camera)){
+            picker.sourceType = .camera
+            present(picker, animated: false, completion: nil)
+        }
+        else{
+            print("Camera not available")
+        }
     }
     
     @IBAction func showMenuAdd(_ sender: Any) {
@@ -30,6 +77,43 @@ class MenuAddVC: UIViewController {
         self.performSegue(withIdentifier: "showMenuAdd", sender: self)
     }
     
+    @IBAction func clidkMenuAdd(_ sender: Any) {
+                let newMenuInfo = NewMenu(cafeIndex: 13, menuIndex: 1, menuName: menuNameTextField.text!, menuTemperature: true, menuSize: true, menuPrice: Int(menuPriceTextField.text!)!, soldOut: 0, menuIMG: "")
+        
+        MenuAddService.shared.sendMenuAddInfo(newMenu: newMenuInfo) {
+            result in
+            switch result {
+            case .success(let successResponse) :
+                print("menu add success")
+            case .failure(let error) :
+                print("menu add fail ", error)
+            }
+        }
+        
+        self.dismiss(animated: false)
+    }
+}
+
+extension MenuAddVC : UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        
+        if let image = info[UIImagePickerController.InfoKey.originalImage] as? UIImage{
+            menuImage.image = image
+            print("image picker info")
+            print(info)
+        }
+        dismiss(animated: true, completion: nil)
+    }
+    
+    
+}
+
+extension MenuAddVC : UITextFieldDelegate {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        menuNameTextField.resignFirstResponder()
+        menuPriceTextField.resignFirstResponder()
+        return true
+    }
 }
 
 extension MenuAddVC {
