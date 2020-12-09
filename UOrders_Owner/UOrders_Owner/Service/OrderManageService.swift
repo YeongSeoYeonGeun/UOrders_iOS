@@ -20,30 +20,30 @@ class OrderManageService {
     
     private init() {}
     
-//    func getOrderList(completionHandler: @escaping (Result<OrderListResult, Error>) -> Void) {
-//        let requestHeader : HTTPHeaders = [
-//            "Content-Type" : "application/json",
-//            "ownerIndex": "1"
-//        ]
-//        
-//        let request = AF.request("\(Config.baseURL)/cafe/order", method: .get, headers: requestHeader)
-//        request.responseData { response in
-//            switch response.result {
-//            case .success(let successResult):
-//                do{
-//                    let decoder : JSONDecoder = JSONDecoder()
-//                    decoder.keyDecodingStrategy = .convertFromSnakeCase
-//                    
+    func getOrderList(completionHandler: @escaping (Result<OrderListResult, Error>) -> Void) {
+        let requestHeader : HTTPHeaders = [
+            "Content-Type" : "application/json",
+            "ownerIndex": "1"
+        ]
+        
+        let request = AF.request("\(Config.baseURL)/orders/main", method: .get, headers: requestHeader)
+        request.responseData { response in
+            switch response.result {
+            case .success(let successResult):
+                do{
+                    let decoder : JSONDecoder = JSONDecoder()
+                    decoder.keyDecodingStrategy = .convertFromSnakeCase
+                    print(JSON(successResult))
 //                    let orderListData = try? decoder.decode(OrderListResult.self, from: successResult)
 //                    completionHandler(.success(orderListData!))
-//                }catch {
-//                    print(error)
-//                }
-//            case .failure(let error) :
-//                print(error)
-//                completionHandler(.failure(error))
-//            }
-//        }
-//        
-//    }
+                }catch {
+                    print(error)
+                }
+            case .failure(let error) :
+                print(error)
+                completionHandler(.failure(error))
+            }
+        }
+        
+    }
 }

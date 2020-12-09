@@ -62,10 +62,8 @@ extension StoreManageVC : UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
        
         if let rowData = self.storeTableData {
-            print("here")
             return rowData.data.menuInfo.count
         }else{
-            print("0")
             return 0
         }
         

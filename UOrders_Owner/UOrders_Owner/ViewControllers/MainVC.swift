@@ -21,8 +21,27 @@ class MainVC: UIViewController {
     @IBOutlet weak var orderManageView: UIView!
     @IBOutlet weak var storeManageView: UIView!
     
+    var cafeNameAndLocation : CafeDataResult!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        MainService.shared.getCafeNameAndLocation() {
+            result in
+            switch result {
+            case .success(let successData) :
+                print("*************** Main success ***************")
+                guard successData.self != nil else { return }
+                self.cafeNameAndLocation = successData
+                self.cafeNameLabel.text = self.cafeNameAndLocation.data.cafeName
+                self.cafeLoactionLabel.text = self.cafeNameAndLocation.data.cafeLocation
+                
+            case .failure(let error) :
+                print("*************** Main fail ***************")
+                print("getCafeNameAndLocation error ", error)
+                
+            }
+        }
         
         orderManageView.isHidden = false
         storeManageView.isHidden = true
