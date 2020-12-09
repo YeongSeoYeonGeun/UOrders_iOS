@@ -30,9 +30,25 @@ class MyPageVC: UIViewController {
         
     }
     
+    // data
+    var myPageData : MyPage!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        MyPageService.shared.getMyPage(ownerIndex: "1", cafeIndex: "13") {
+            result in
+            switch result {
+            case .success(let successData) :
+                guard successData.self != nil  else { return }
+                self.myPageData = successData.data
+                
+                print(self.myPageData)
+                
+            case .failure(let error) :
+                print("getOrderList Error ", error)
+            }
+        }
         
         let gesture = UITapGestureRecognizer(target: self, action: #selector(MyPageVC.goProfit))
         self.profitCheckView.addGestureRecognizer(gesture)

@@ -19,19 +19,19 @@ class OrderManageVC : UIViewController {
         super.viewDidLoad()
         setOrderTableView()
         
-//        OrderManageService.shared.getOrderList() {
-//            result in
-//            switch result {
-//            case .success(let successData) :
-//                print(".success")
-//                print(successData)
-//                guard successData.self != nil  else { return }
-//                self.OrderList = successData
-//                
-//            case .failure(let error) :
-//                print("getOrderList Error ", error)
-//            }
-//        }
+        OrderManageService.shared.getOrderList() {
+            result in
+            switch result {
+            case .success(let successData) :
+                print(".success")
+                print(successData)
+                guard successData.self != nil  else { return }
+                self.OrderList = successData
+                
+            case .failure(let error) :
+                print("getOrderList Error ", error)
+            }
+        }
     }
     
     func setOrderTableView() {
