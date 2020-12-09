@@ -8,26 +8,26 @@
 import Foundation
 
 //주문 관리 데이터
-struct OrderListResult : Codable {
-    let message : String
+struct OrderListDataResult : Codable{
     let status : Int
-    let data : OrderData
+    let message : String
+    let data : CafeAndOrder
 }
 
-struct OrderData : Codable {
+struct CafeAndOrder : Codable {
     let cafeName : String
     let cafeLocation : String
-    let orderInfo : [OrderInfo]
+    let orderInfo : [Order]
 }
 
-struct OrderInfo : Codable {
+struct Order : Codable {
     let ticketNumber : Int
     let orderID : String
-    let orderTime : String
-    let menuInfo : [MenuInfo]
+    let orderTime : Int
+    let menuInfo : [MenuItem]
 }
 
-struct MenuInfo : Codable {
+struct MenuItem : Codable {
     let menuIndex : Int
     let menuName : String
     let menuTemperature : String
