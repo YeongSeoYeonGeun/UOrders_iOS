@@ -7,31 +7,32 @@
 
 import UIKit
 
-struct Menu {
-//    var menuPhoto : String
-    var menuName : String
-    var menuPrice : String
-}
-
 class StoreManageVC: UIViewController {
     
-    let menuList = [Menu(menuName: "아메리카노", menuPrice: "1,000원"),
-                    Menu(menuName: "카페라떼", menuPrice: "1,500원"),
-                    Menu(menuName: "카페모카", menuPrice: "2,000원"),
-                    Menu(menuName: "플랫화이트", menuPrice: "1,000원"),
-                    Menu(menuName: "콜드브루 아메리카노", menuPrice: "1,500원"),
-                    Menu(menuName: "아메리카노", menuPrice: "1,000원"),
-                    Menu(menuName: "카페라떼", menuPrice: "1,500원"),
-                    Menu(menuName: "카페모카", menuPrice: "2,000원"),
-                    Menu(menuName: "플랫화이트", menuPrice: "1,000원"),
-                    Menu(menuName: "콜드브루 아메리카노", menuPrice: "1,500원")]
-
     @IBOutlet weak var storeTableView: UITableView!
-    
     @IBOutlet weak var menuAddButton: UIButton!
+    
+    var storeTableData : CafeMenuDataResult!{
+        didSet {storeTableView.reloadData()}
+    }
+    
     override func viewDidLoad() {
-        super.viewDidLoad()
         setStoreTableView()
+        super.viewDidLoad()
+        
+        StoreManageService.shared.getStoreManageMain() {
+            result in
+            switch result {
+            case .success(let successData) :
+                print(".success")
+                guard successData.self != nil else { return }
+                self.storeTableData = successData
+            case .failure(let error) :
+                print("getStoreManageMain Error", error)
+                
+            }
+        }
+        
     }
     
     func setStoreTableView() {
@@ -46,11 +47,28 @@ class StoreManageVC: UIViewController {
             menuAddButton.trailingAnchor.constraint(equalTo: storeTableView.frameLayoutGuide.trailingAnchor, constant: -30)
         ])
     }
+    
+    @IBAction func showMenuAddVC(_ sender: Any) {
+        guard let vc = self.storyboard?.instantiateViewController(identifier: "MenuAddStoryBoard") else { return }
+        vc.modalTransitionStyle = .flipHorizontal
+        vc.modalPresentationStyle = .overCurrentContext
+        
+        self.parent?.present(vc, animated: false, completion: nil)
+    }
+    
 }
 
 extension StoreManageVC : UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return menuList.count
+       
+        if let rowData = self.storeTableData {
+            print("here")
+            return rowData.data.menuInfo.count
+        }else{
+            print("0")
+            return 0
+        }
+        
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -58,9 +76,8 @@ extension StoreManageVC : UITableViewDelegate, UITableViewDataSource {
         
         cell.menuPhotoImage.layer.cornerRadius = cell.menuPhotoImage.frame.width/2
         cell.clipsToBounds = true
-        
-        cell.menuNameLabel.text = menuList[indexPath.row].menuName
-        cell.menuPriceLabel.text = menuList[indexPath.row].menuPrice
+        cell.menuNameLabel.text = storeTableData.data.menuInfo[indexPath.row].menuName
+        cell.menuPriceLabel.text = "\(storeTableData.data.menuInfo[indexPath.row].menuPrice)원"
         
         return cell
     }

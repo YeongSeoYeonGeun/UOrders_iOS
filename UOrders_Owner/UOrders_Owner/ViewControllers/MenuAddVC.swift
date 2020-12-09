@@ -10,6 +10,7 @@ import BEMCheckBox
 
 class MenuAddVC: UIViewController {
     
+    @IBOutlet var wholeContainerView: UIView!
     @IBOutlet weak var smallCheckBoxArea: UIView!
     @IBOutlet weak var regularCheckBoxArea: UIView!
     @IBOutlet weak var largeCheckBoxArea: UIView!

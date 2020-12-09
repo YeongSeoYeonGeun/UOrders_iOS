@@ -1,88 +1,108 @@
 //
-//  OrderManageVC.swift
+//  TestTableVC.swift
 //  UOrders_Owner
 //
-//  Created by SEONYOUNG LEE on 2020/11/16.
+//  Created by SEONYOUNG LEE on 2020/12/02.
 //
 
 import UIKit
 
-struct Order {
-    var customerName : String
-    var orderNumber : String
-    var leftTime : String
-}
+class OrderManageVC : UIViewController {
 
-class OrderManageVC: UIViewController {
+    @IBOutlet weak var orderTableView: UITableView!
     
-    let orderList = [Order(customerName : "시연 님", orderNumber: "(No. 17)", leftTime: "13 분"),
-                     Order(customerName : "종근 님", orderNumber: "(No. 18)", leftTime: "25 분"),
-                     Order(customerName : "영서 님", orderNumber: "(No. 19)", leftTime: "34 분"),
-                     Order(customerName : "선영 님", orderNumber: "(No. 20)", leftTime: "40 분"),
-                     Order(customerName : "시연 님", orderNumber: "(No. 21)", leftTime: "45 분")
-                     ]
-
-    @IBOutlet weak var orderCollectionView: UICollectionView!
+    var OrderList : OrderListResult! {
+        didSet {orderTableView.reloadData()}
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setOrderTableView()
+        
+//        OrderManageService.shared.getOrderList() {
+//            result in
+//            switch result {
+//            case .success(let successData) :
+//                print(".success")
+//                print(successData)
+//                guard successData.self != nil  else { return }
+//                self.OrderList = successData
+//                
+//            case .failure(let error) :
+//                print("getOrderList Error ", error)
+//            }
+//        }
     }
     
     func setOrderTableView() {
-        orderCollectionView.dataSource = self
-        orderCollectionView.delegate = self
+        self.orderTableView.delegate = self
+        self.orderTableView.dataSource = self
+        self.orderTableView.separatorStyle = UITableViewCell.SeparatorStyle.none
         
+        let headerNib = UINib(nibName: "OrderListSectionHeader", bundle: nil)
+        self.orderTableView.register(headerNib, forHeaderFooterViewReuseIdentifier: "orderListSectionHeader")
         
-        let orderLayout = UICollectionViewFlowLayout()
-        orderLayout.minimumLineSpacing = 0
-        orderLayout.minimumInteritemSpacing = 0
-        orderLayout.sectionInset = UIEdgeInsets.zero
-        orderLayout.itemSize = CGSize(width: self.view.frame.width, height : 200)
-        orderCollectionView.collectionViewLayout = orderLayout
+        let footerNib = UINib(nibName: "OrderListSectionFooter", bundle: nil)
+        self.orderTableView.register(footerNib, forHeaderFooterViewReuseIdentifier: "orderListSectionFooter")
     }
-
 }
 
-extension OrderManageVC : UICollectionViewDelegate, UICollectionViewDataSource{
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return self.orderList.count
+extension OrderManageVC : UITableViewDelegate, UITableViewDataSource {
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let headerView = self.orderTableView.dequeueReusableHeaderFooterView(withIdentifier: "orderListSectionHeader") as! OrderListSectionHeader
+        
+        headerView.customerNameLabel.text = OrderList.data.orderInfo[section].orderID
+        headerView.orderNumberLabel.text = String(OrderList.data.orderInfo[section].ticketNumber)
+        headerView.leftTimeLabel.text = OrderList.data.orderInfo[section].orderTime
+        
+        return headerView
     }
     
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "orderCollectionViewCell", for: indexPath) as! OrderCollectionViewCell
+    func tableView(_  tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
+        let footerView = self.orderTableView.dequeueReusableHeaderFooterView(withIdentifier: "orderListSectionFooter") as! OrderListSectionFooter
         
-        cell.customerNameLabel.text = orderList[indexPath.row].customerName
-        cell.orderNumberLabel.text = orderList[indexPath.row].orderNumber
-        cell.leftTimeLabel.text = orderList[indexPath.row].leftTime
+        return footerView
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return OrderList.data.orderInfo[section].menuInfo.count
+    }
+    
+    func deleteSections(_ sections: IndexSet, with : UITableView.RowAnimation){
+        print("deleteSections")
+    
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "orderItemTableViewCell", for:indexPath) as! OrderItemTableViewCell
+        
+        let sectionOrder = OrderList.data.orderInfo[indexPath.section].menuInfo
+        cell.itemNameLabel.text = sectionOrder[indexPath.row].menuName
+        cell.itemConditionLabel.text = "(" + sectionOrder[indexPath.row].menuTemperature + "/" + sectionOrder[indexPath.row].menuSize + "/" + sectionOrder[indexPath.row].menuTakeType + ")"
         
         return cell
     }
     
-    func numberOfSections(in collectionView: UICollectionView) -> Int {
-        return self.orderList.count
+    func numberOfSections(in tableView: UITableView) -> Int {
+        
+        if let orderList = self.OrderList {
+            return orderList.data.orderInfo.count
+        }else {
+            return 0
+        }
     }
+    
+    
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return 47
+    }
+    
+    func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
+        return 65
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 50
+    }
+    
 }
-
-//extension OrderManageVC : UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
-//    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-//        return 1
-//    }
-//    
-//    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-//        
-//        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "orderCollectionViewCell", for: indexPath)
-//        
-//        return cell
-//    }
-//    
-//    func numberOfSections(in collectionView: UICollectionView) -> Int {
-//        return self.orderList.count
-//    }
-//    
-//    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-//        
-//        return CGSize(width: orderCollectionView.frame.width, height: 200)
-//    }
-//}
-
