@@ -17,6 +17,7 @@ class StoreManageVC: UIViewController {
     }
     
     override func viewDidLoad() {
+        print("Store")
         setStoreTableView()
         super.viewDidLoad()
         
@@ -24,7 +25,7 @@ class StoreManageVC: UIViewController {
             result in
             switch result {
             case .success(let successData) :
-                print(".success")
+                print("getStoreManageMain success")
                 guard successData.self != nil else { return }
                 self.storeTableData = successData
             case .failure(let error) :
@@ -73,6 +74,15 @@ extension StoreManageVC : UITableViewDelegate, UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: "storeTableViewCell", for: indexPath) as! StoreTableViewCell
         
         cell.menuPhotoImage.layer.cornerRadius = cell.menuPhotoImage.frame.width/2
+        
+        let url = URL(string: storeTableData.data.menuInfo[indexPath.row].menuImage)
+        do{
+            let imageData = try Data(contentsOf: url!)
+            cell.menuPhotoImage.image = UIImage(data: imageData)
+        }catch{
+            print(error)
+        }
+        
         cell.clipsToBounds = true
         cell.menuNameLabel.text = storeTableData.data.menuInfo[indexPath.row].menuName
         cell.menuPriceLabel.text = "\(storeTableData.data.menuInfo[indexPath.row].menuPrice)원"

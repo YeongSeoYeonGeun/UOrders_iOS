@@ -16,6 +16,7 @@ class OrderManageVC : UIViewController {
     }
     
     override func viewDidLoad() {
+        print("Order")
         super.viewDidLoad()
         setOrderTableView()
         
@@ -23,11 +24,10 @@ class OrderManageVC : UIViewController {
             result in
             switch result {
             case .success(let successData) :
-                print(".success")
-                print(successData)
+                print("getOrderList success")
                 guard successData.self != nil  else { return }
                 self.OrderList = successData
-                
+
             case .failure(let error) :
                 print("getOrderList Error ", error)
             }
