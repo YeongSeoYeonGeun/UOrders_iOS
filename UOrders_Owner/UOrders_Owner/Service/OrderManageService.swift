@@ -20,30 +20,33 @@ class OrderManageService {
     
     private init() {}
     
-    func getOrderList(completionHandler: @escaping (Result<OrderListResult, Error>) -> Void) {
+    func getOrderList(completionHandler: @escaping (Result<OrderListDataResult, Error>) -> Void) {
         let requestHeader : HTTPHeaders = [
             "Content-Type" : "application/json",
             "ownerIndex": "1"
         ]
         
-        let request = AF.request("\(Config.baseURL)/orders/main", method: .get, headers: requestHeader)
-        request.responseData { response in
-            switch response.result {
-            case .success(let successResult):
-                do{
-                    let decoder : JSONDecoder = JSONDecoder()
-                    decoder.keyDecodingStrategy = .convertFromSnakeCase
-                    print(JSON(successResult))
-//                    let orderListData = try? decoder.decode(OrderListResult.self, from: successResult)
-//                    completionHandler(.success(orderListData!))
-                }catch {
+        let request = AF.request("\(Config.baseURL)/orders/main", method : .get, headers: requestHeader)
+        
+        request.responseData { dataResponse in
+            switch dataResponse.result {
+            case .success(let successResponse):
+                let decoder = JSONDecoder()
+                
+                do {
+                    let myPageResponse = try decoder.decode(OrderListDataResult.self, from: dataResponse.data!)
+                    print(myPageResponse)
+                    
+                    completionHandler(.success(myPageResponse))
+                } catch {
                     print(error)
                 }
+                
             case .failure(let error) :
                 print(error)
                 completionHandler(.failure(error))
+                
             }
         }
-        
     }
 }
