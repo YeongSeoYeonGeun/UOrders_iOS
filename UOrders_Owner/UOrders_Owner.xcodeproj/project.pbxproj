@@ -20,7 +20,6 @@
 		A91767DE25779BED009D8D53 /* MyPage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A91767DD25779BED009D8D53 /* MyPage.storyboard */; };
 		A917681A2577AF6D009D8D53 /* OrderListSectionFooter.xib in Resources */ = {isa = PBXBuildFile; fileRef = A91768192577AF6D009D8D53 /* OrderListSectionFooter.xib */; };
 		A917682E2577B2E4009D8D53 /* OrderListSectionFooter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A917682D2577B2E4009D8D53 /* OrderListSectionFooter.swift */; };
-		A91768A42577C442009D8D53 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A91768A22577C442009D8D53 /* Main.storyboard */; };
 		A92AD5DA256E3E2E0098292B /* StoreManageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A92AD5D9256E3E2E0098292B /* StoreManageVC.swift */; };
 		A92AD5E8256E44400098292B /* StoreTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A92AD5E7256E44400098292B /* StoreTableViewCell.swift */; };
 		A94BC2CE257A03B3003B1475 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = A94BC2CD257A03B3003B1475 /* Config.swift */; };
@@ -33,6 +32,7 @@
 		A98ED9692561714700EB3E8D /* UOrders_OwnerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A98ED9682561714700EB3E8D /* UOrders_OwnerTests.swift */; };
 		A98ED9742561714700EB3E8D /* UOrders_OwnerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A98ED9732561714700EB3E8D /* UOrders_OwnerUITests.swift */; };
 		A98F1CB2256FC2A300E7AC8B /* MenuAddVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A98F1CB1256FC2A300E7AC8B /* MenuAddVC.swift */; };
+		A98F2B7D2580D8900016AB09 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A98F2B7C2580D8900016AB09 /* Main.storyboard */; };
 		A9CA76562574B7B900D7441D /* OrderCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9CA76552574B7B900D7441D /* OrderCollectionViewCell.swift */; };
 		B1CD2C4F53C1DF88E9B94DDA /* Pods_UOrders_Owner_UOrders_OwnerUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8597A975C7D2F84F8C78F713 /* Pods_UOrders_Owner_UOrders_OwnerUITests.framework */; };
 		B568BEFD2577784C0033C1E5 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B568BEFC2577784C0033C1E5 /* LoginVC.swift */; };
@@ -75,7 +75,6 @@
 		A91767DD25779BED009D8D53 /* MyPage.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MyPage.storyboard; sourceTree = "<group>"; };
 		A91768192577AF6D009D8D53 /* OrderListSectionFooter.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OrderListSectionFooter.xib; sourceTree = "<group>"; };
 		A917682D2577B2E4009D8D53 /* OrderListSectionFooter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderListSectionFooter.swift; sourceTree = "<group>"; };
-		A91768A32577C442009D8D53 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A92AD5D9256E3E2E0098292B /* StoreManageVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreManageVC.swift; sourceTree = "<group>"; };
 		A92AD5E7256E44400098292B /* StoreTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreTableViewCell.swift; sourceTree = "<group>"; };
 		A94BC2CD257A03B3003B1475 /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
@@ -94,6 +93,7 @@
 		A98ED9732561714700EB3E8D /* UOrders_OwnerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UOrders_OwnerUITests.swift; sourceTree = "<group>"; };
 		A98ED9752561714700EB3E8D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A98F1CB1256FC2A300E7AC8B /* MenuAddVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuAddVC.swift; sourceTree = "<group>"; };
+		A98F2B7C2580D8900016AB09 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		A9CA76552574B7B900D7441D /* OrderCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderCollectionViewCell.swift; sourceTree = "<group>"; };
 		B568BEFC2577784C0033C1E5 /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
 		B568BF13257781580033C1E5 /* Login2.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login2.storyboard; sourceTree = "<group>"; };
@@ -186,7 +186,7 @@
 		A951033D2562425C00429FC0 /* Storyboards */ = {
 			isa = PBXGroup;
 			children = (
-				A91768A22577C442009D8D53 /* Main.storyboard */,
+				A98F2B7C2580D8900016AB09 /* Main.storyboard */,
 				B568BF13257781580033C1E5 /* Login2.storyboard */,
 				A91767D825779BDF009D8D53 /* Login.storyboard */,
 				A91767DD25779BED009D8D53 /* MyPage.storyboard */,
@@ -381,7 +381,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A91768A42577C442009D8D53 /* Main.storyboard in Resources */,
+				A98F2B7D2580D8900016AB09 /* Main.storyboard in Resources */,
 				A91767DE25779BED009D8D53 /* MyPage.storyboard in Resources */,
 				A91767CD25777976009D8D53 /* OrderListSectionHeader.xib in Resources */,
 				A98ED95B2561714700EB3E8D /* Assets.xcassets in Resources */,
@@ -566,17 +566,6 @@
 			targetProxy = A98ED9702561714700EB3E8D /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
-
-/* Begin PBXVariantGroup section */
-		A91768A22577C442009D8D53 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				A91768A32577C442009D8D53 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		A98ED9762561714700EB3E8D /* Debug */ = {
