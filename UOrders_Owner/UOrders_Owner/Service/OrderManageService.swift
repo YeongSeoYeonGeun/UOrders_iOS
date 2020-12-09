@@ -31,12 +31,23 @@ class OrderManageService {
         request.responseData { dataResponse in
             switch dataResponse.result {
             case .success(let successResult):
+<<<<<<< HEAD
                 let orderDecoder : JSONDecoder = JSONDecoder()
                 orderDecoder.keyDecodingStrategy = .convertFromSnakeCase
                 
                 guard let orderListData = try? orderDecoder.decode(OrderListResult.self, from: successResult) else {
                     print("Decoding Fail")
                     return
+=======
+                do{
+                    let decoder : JSONDecoder = JSONDecoder()
+                    decoder.keyDecodingStrategy = .convertFromSnakeCase
+                    print(JSON(successResult))
+//                    let orderListData = try? decoder.decode(OrderListResult.self, from: successResult)
+//                    completionHandler(.success(orderListData!))
+                }catch {
+                    print(error)
+>>>>>>> 26a4a0bcf14a91b6e1689c00f0b13a73faf3ad74
                 }
                 completionHandler(.success(orderListData))
             case .failure(let error) :
