@@ -34,8 +34,8 @@ class OrderManageService {
                     let decoder : JSONDecoder = JSONDecoder()
                     decoder.keyDecodingStrategy = .convertFromSnakeCase
                     print(JSON(successResult))
-                    let orderListData = try? decoder.decode(OrderListResult.self, from: successResult)
-                    completionHandler(.success(orderListData!))
+//                    let orderListData = try? decoder.decode(OrderListResult.self, from: successResult)
+//                    completionHandler(.success(orderListData!))
                 }catch {
                     print(error)
                 }
