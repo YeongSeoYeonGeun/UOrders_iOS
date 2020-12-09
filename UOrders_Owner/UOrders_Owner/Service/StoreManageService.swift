@@ -36,6 +36,7 @@ class StoreManageService {
                     print("Decoding Fail")
                     return
                 }
+                
                 completionHandler(.success(cafeData))
             case .failure(let error) :
                 print(error)

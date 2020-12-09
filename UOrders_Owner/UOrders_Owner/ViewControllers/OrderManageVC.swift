@@ -11,7 +11,7 @@ class OrderManageVC : UIViewController {
 
     @IBOutlet weak var orderTableView: UITableView!
     
-    var OrderList : OrderListResult! {
+    var OrderList : OrderListDataResult! {
         didSet {orderTableView.reloadData()}
     }
     
@@ -51,9 +51,9 @@ extension OrderManageVC : UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         let headerView = self.orderTableView.dequeueReusableHeaderFooterView(withIdentifier: "orderListSectionHeader") as! OrderListSectionHeader
         
-        headerView.customerNameLabel.text = OrderList.data.orderInfo[section].orderID
-        headerView.orderNumberLabel.text = String(OrderList.data.orderInfo[section].ticketNumber)
-        headerView.leftTimeLabel.text = OrderList.data.orderInfo[section].orderTime
+        headerView.customerNameLabel.text = OrderList.data.orderInfo[section].orderID + " 님"
+        headerView.orderNumberLabel.text = "(No." + String(OrderList.data.orderInfo[section].ticketNumber) + ")"
+        headerView.leftTimeLabel.text = String(OrderList.data.orderInfo[section].orderTime) + "분"
         
         return headerView
     }
