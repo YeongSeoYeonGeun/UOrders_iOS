@@ -669,7 +669,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="i0J-lK-LB2">
-                                <rect key="frame" x="0.0" y="30" width="414" height="30"/>
+                                <rect key="frame" x="0.0" y="35" width="414" height="30"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZOz-tD-ty4">
                                         <rect key="frame" x="0.0" y="0.0" width="48" height="30"/>
@@ -695,13 +695,15 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hPF-TU-KvV">
-                                <rect key="frame" x="149" y="110" width="116" height="116"/>
+                                <rect key="frame" x="149" y="115" width="116" height="116"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="img-default" translatesAutoresizingMaskIntoConstraints="NO" id="enX-t8-ip2">
                                         <rect key="frame" x="0.0" y="0.0" width="116" height="116"/>
+                                        <gestureRecognizers/>
                                     </imageView>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic-add-photo" translatesAutoresizingMaskIntoConstraints="NO" id="FWT-xs-mdt">
                                         <rect key="frame" x="82" y="92" width="24" height="24"/>
+                                        <gestureRecognizers/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="24" id="g4T-Fe-fi6"/>
                                             <constraint firstAttribute="height" constant="24" id="rUn-C4-oVX"/>
@@ -720,7 +722,7 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0e5-3A-MtU">
-                                <rect key="frame" x="30" y="271" width="354" height="35"/>
+                                <rect key="frame" x="30" y="276" width="354" height="35"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="메뉴 이름" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wrd-Az-VYe">
                                         <rect key="frame" x="10" y="5.5" width="334" height="24"/>
@@ -751,7 +753,7 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BTk-4n-uZc">
-                                <rect key="frame" x="30" y="334" width="354" height="35"/>
+                                <rect key="frame" x="30" y="339" width="354" height="35"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aNz-CV-ZbP">
                                         <rect key="frame" x="0.0" y="33" width="354" height="2"/>
@@ -783,7 +785,7 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5z3-0L-bMo">
-                                <rect key="frame" x="30" y="409" width="354" height="17"/>
+                                <rect key="frame" x="30" y="414" width="354" height="17"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="제공하는 사이즈를 선택해주세요." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CtT-xm-Jtq">
                                         <rect key="frame" x="0.0" y="0.0" width="354" height="17"/>
@@ -801,7 +803,7 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="erj-HX-SBw">
-                                <rect key="frame" x="30" y="422.5" width="354" height="36"/>
+                                <rect key="frame" x="30" y="427.5" width="354" height="36"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="U4I-Wp-Ruv">
                                         <rect key="frame" x="0.0" y="10" width="354" height="26"/>
@@ -895,7 +897,7 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ueM-dK-qHc">
-                                <rect key="frame" x="30" y="498.5" width="354" height="17"/>
+                                <rect key="frame" x="30" y="503.5" width="354" height="17"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="제공 여부를 선택해주세요." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VrU-LD-LEs">
                                         <rect key="frame" x="0.0" y="0.0" width="354" height="17"/>
@@ -912,7 +914,7 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UP4-s4-w8w">
-                                <rect key="frame" x="30" y="515.5" width="354" height="36"/>
+                                <rect key="frame" x="30" y="520.5" width="354" height="36"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="bmx-3Z-ETy">
                                         <rect key="frame" x="0.0" y="0.0" width="354" height="36"/>
@@ -984,7 +986,7 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2gw-MN-fWx">
-                                <rect key="frame" x="30" y="591.5" width="354" height="25"/>
+                                <rect key="frame" x="30" y="596.5" width="354" height="25"/>
                                 <subviews>
                                     <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="lfZ-3f-qVk">
                                         <rect key="frame" x="0.0" y="0.0" width="51" height="20"/>
@@ -1013,7 +1015,7 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9nP-DU-M7F">
-                                <rect key="frame" x="8" y="782" width="398" height="52"/>
+                                <rect key="frame" x="8" y="795" width="398" height="52"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zPt-ge-Bxf">
                                         <rect key="frame" x="0.0" y="8" width="398" height="36"/>
@@ -1021,6 +1023,9 @@
                                         <state key="normal" title="매뉴 추가">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
+                                        <connections>
+                                            <action selector="clidkMenuAdd:" destination="fMH-3A-FVE" eventType="touchUpInside" id="O3O-nS-736"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.043137254901960784" green="0.27450980392156865" blue="0.23529411764705882" alpha="1" colorSpace="calibratedRGB"/>
@@ -1029,13 +1034,6 @@
                                     <constraint firstItem="zPt-ge-Bxf" firstAttribute="leading" secondItem="9nP-DU-M7F" secondAttribute="leading" id="d9f-xb-mZb"/>
                                     <constraint firstAttribute="trailing" secondItem="zPt-ge-Bxf" secondAttribute="trailing" id="gZC-jN-LXK"/>
                                     <constraint firstItem="zPt-ge-Bxf" firstAttribute="centerY" secondItem="9nP-DU-M7F" secondAttribute="centerY" id="phj-RD-6Hl"/>
-                                </constraints>
-                            </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bSQ-TA-dH9">
-                                <rect key="frame" x="0.0" y="616.5" width="414" height="115"/>
-                                <color key="backgroundColor" systemColor="systemOrangeColor"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="115" id="lIv-i8-KnR"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -1048,6 +1046,7 @@
                             <constraint firstItem="2gw-MN-fWx" firstAttribute="top" secondItem="UP4-s4-w8w" secondAttribute="bottom" constant="40" id="51c-6W-FJg"/>
                             <constraint firstItem="dYP-BM-OlB" firstAttribute="trailing" secondItem="9nP-DU-M7F" secondAttribute="trailing" constant="8" id="5DO-mt-CZ9"/>
                             <constraint firstItem="2gw-MN-fWx" firstAttribute="centerX" secondItem="ZjU-rg-yTS" secondAttribute="centerX" id="5dL-Ue-WPw"/>
+                            <constraint firstItem="dYP-BM-OlB" firstAttribute="bottom" secondItem="9nP-DU-M7F" secondAttribute="bottom" constant="15" id="801-C4-LSb"/>
                             <constraint firstItem="UP4-s4-w8w" firstAttribute="top" secondItem="VrU-LD-LEs" secondAttribute="bottom" id="8nU-eD-bld"/>
                             <constraint firstItem="dYP-BM-OlB" firstAttribute="trailing" secondItem="erj-HX-SBw" secondAttribute="trailing" constant="30" id="C4O-7v-636"/>
                             <constraint firstItem="UP4-s4-w8w" firstAttribute="leading" secondItem="dYP-BM-OlB" secondAttribute="leading" constant="30" id="D0K-Ew-kHa"/>
@@ -1058,19 +1057,15 @@
                             <constraint firstItem="dYP-BM-OlB" firstAttribute="trailing" secondItem="2gw-MN-fWx" secondAttribute="trailing" constant="30" id="HtE-ne-IOf"/>
                             <constraint firstItem="BTk-4n-uZc" firstAttribute="top" secondItem="0e5-3A-MtU" secondAttribute="bottom" constant="28" id="IuQ-wN-DBM"/>
                             <constraint firstItem="BTk-4n-uZc" firstAttribute="leading" secondItem="dYP-BM-OlB" secondAttribute="leading" constant="30" id="MRO-zc-zpi"/>
-                            <constraint firstItem="dYP-BM-OlB" firstAttribute="trailing" secondItem="bSQ-TA-dH9" secondAttribute="trailing" id="MZt-Ff-4RX"/>
                             <constraint firstItem="dYP-BM-OlB" firstAttribute="trailing" secondItem="i0J-lK-LB2" secondAttribute="trailing" id="OYC-em-pzG"/>
                             <constraint firstItem="dYP-BM-OlB" firstAttribute="trailing" secondItem="0e5-3A-MtU" secondAttribute="trailing" constant="30" id="TRm-mL-UxY"/>
                             <constraint firstItem="5z3-0L-bMo" firstAttribute="leading" secondItem="dYP-BM-OlB" secondAttribute="leading" constant="30" id="Te9-Ir-qIQ"/>
-                            <constraint firstItem="i0J-lK-LB2" firstAttribute="top" secondItem="ZjU-rg-yTS" secondAttribute="top" constant="30" id="VKI-s7-brK"/>
+                            <constraint firstItem="i0J-lK-LB2" firstAttribute="top" secondItem="ZjU-rg-yTS" secondAttribute="top" constant="35" id="VKI-s7-brK"/>
                             <constraint firstItem="ueM-dK-qHc" firstAttribute="leading" secondItem="dYP-BM-OlB" secondAttribute="leading" constant="30" id="WSk-HY-cBP"/>
                             <constraint firstItem="0e5-3A-MtU" firstAttribute="centerX" secondItem="ZjU-rg-yTS" secondAttribute="centerX" id="Ybp-9Q-KsR"/>
-                            <constraint firstItem="bSQ-TA-dH9" firstAttribute="leading" secondItem="dYP-BM-OlB" secondAttribute="leading" id="dMR-cK-JDt"/>
-                            <constraint firstItem="bSQ-TA-dH9" firstAttribute="top" secondItem="2gw-MN-fWx" secondAttribute="bottom" id="dXa-PN-zq8"/>
                             <constraint firstItem="i0J-lK-LB2" firstAttribute="leading" secondItem="dYP-BM-OlB" secondAttribute="leading" id="exM-vy-v1G"/>
                             <constraint firstItem="erj-HX-SBw" firstAttribute="centerX" secondItem="ZjU-rg-yTS" secondAttribute="centerX" id="gie-0B-B5I"/>
                             <constraint firstItem="erj-HX-SBw" firstAttribute="firstBaseline" secondItem="CtT-xm-Jtq" secondAttribute="baseline" id="hS2-dz-wO3"/>
-                            <constraint firstItem="9nP-DU-M7F" firstAttribute="top" secondItem="bSQ-TA-dH9" secondAttribute="bottom" constant="50.5" id="jYt-av-yBN"/>
                             <constraint firstItem="0e5-3A-MtU" firstAttribute="leading" secondItem="dYP-BM-OlB" secondAttribute="leading" constant="30" id="nnT-ag-jCt"/>
                             <constraint firstItem="hPF-TU-KvV" firstAttribute="top" secondItem="i0J-lK-LB2" secondAttribute="bottom" constant="50" id="okB-5q-bdS"/>
                             <constraint firstItem="9nP-DU-M7F" firstAttribute="leading" secondItem="dYP-BM-OlB" secondAttribute="leading" constant="8" id="osC-Ld-elu"/>
@@ -1088,7 +1083,11 @@
                         <outlet property="icedCheckBoxArea" destination="fIc-sF-ymV" id="UZz-x7-Y2b"/>
                         <outlet property="largeCheckBoxArea" destination="Gz4-Oe-NKz" id="48t-gL-nXw"/>
                         <outlet property="menuAddButton" destination="9nP-DU-M7F" id="KaU-ra-q4P"/>
+                        <outlet property="menuImage" destination="enX-t8-ip2" id="f7b-ct-j00"/>
+                        <outlet property="menuNameTextField" destination="wrd-Az-VYe" id="Fge-FI-dHQ"/>
+                        <outlet property="menuPriceTextField" destination="rn5-kS-Flz" id="hfL-Br-02i"/>
                         <outlet property="regularCheckBoxArea" destination="6gI-Cd-6b9" id="xuP-db-Ni2"/>
+                        <outlet property="searchPhotoButton" destination="FWT-xs-mdt" id="vYF-1V-Vxq"/>
                         <outlet property="smallCheckBoxArea" destination="NXZ-Ef-9c0" id="jcl-Gg-D6h"/>
                         <outlet property="soldoutSwitch" destination="lfZ-3f-qVk" id="aOc-mT-Vfc"/>
                         <outlet property="wholeContainerView" destination="ZjU-rg-yTS" id="wOD-8Y-sxW"/>
