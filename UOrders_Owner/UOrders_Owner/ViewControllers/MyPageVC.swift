@@ -63,12 +63,6 @@ class MyPageVC: UIViewController{
         self.myPageOrderTableView.dataSource = self
         self.myPageOrderTableView.separatorStyle = UITableViewCell.SeparatorStyle.none
         
-//        let headerNib = UINib(nibName: "MyPageOrderSectionHeader", bundle: nil)
-//        self.myPageOrderTableView.register(headerNib, forHeaderFooterViewReuseIdentifier: "myPageOrderSectionHeader")
-//
-//        let footerNib = UINib(nibName: "MyPageOrderSectionFooter", bundle: nil)
-//        self.myPageOrderTableView.register(footerNib, forHeaderFooterViewReuseIdentifier: "myPageOrderSectionFooter")
-
     }
     
     func setData(){
@@ -128,22 +122,6 @@ class MyPageVC: UIViewController{
 
 
 extension MyPageVC : UITableViewDelegate, UITableViewDataSource {
-    
-//    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-//        let headerView = self.myPageOrderTableView.dequeueReusableHeaderFooterView(withIdentifier: "myPageOrderSectionHeader") as! MyPageOrderSectionHeader
-//
-//        headerView.customerNameLabel.text = self.myPageOrderList[section].orderer + " 님"
-//        headerView.orderTimeLabel.text = self.myPageOrderList[section].orderTime
-//
-//        return headerView
-//    }
-//
-//    func tableView(_  tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
-//
-//        let footerView = self.myPageOrderTableView.dequeueReusableHeaderFooterView(withIdentifier: "myPageOrderSectionFooter") as! MyPageOrderSectionFooter
-//
-//        return footerView
-//    }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return myPageOrderList[section].orderMenuInfo.count + 2

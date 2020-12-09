@@ -21,8 +21,12 @@ class EditCafeInfoVC: UIViewController {
     }
     
     
+    // data
+    var myPageData : MyPage!
+    
+    
     override func viewWillAppear(_ animated: Bool) {
-        // todo: 통신해서 data 받아오기
+        setData()
     }
     
     override func viewDidLoad() {
@@ -31,6 +35,28 @@ class EditCafeInfoVC: UIViewController {
         // Do any additional setup after loading the view.
     }
     
+    func setData(){
+        
+        MyPageService.shared.getMyPage(ownerIndex: "1", cafeIndex: "13") {
+            result in
+            switch result {
+            case .success(let successData) :
+                guard successData.self != nil  else { return }
+                self.myPageData = successData.data
+                
+                self.dataBiding()
+                
+            case .failure(let error) :
+                print("getMyPage Error ", error)
+            }
+        }
+       
+    }
+    
+    func dataBiding(){
+        self.cafeNameTextField.text = myPageData.cafeInfo.cafeName
+        self.cafeLocationTextField.text = myPageData.cafeInfo.cafeLocation
+    }
 
     /*
     // MARK: - Navigation
