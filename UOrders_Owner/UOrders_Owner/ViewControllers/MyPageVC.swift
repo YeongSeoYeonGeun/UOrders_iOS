@@ -7,7 +7,7 @@
 
 import UIKit
 
-class MyPageVC: UIViewController{
+class MyPageVC: UIViewController, EditCafeInfoDelegate{
     
     @IBOutlet weak var cafeImageBorderView: UIView!
     @IBOutlet weak var cafeImageView: UIImageView!
@@ -26,6 +26,7 @@ class MyPageVC: UIViewController{
     @IBAction func clickCafeInfoEdit(_ sender: Any) {
         
         let vc = self.storyboard?.instantiateViewController(withIdentifier: "editCafeInfoVC") as! EditCafeInfoVC
+        vc.del = self
         
         self.present(vc, animated: true, completion: nil)
     }
@@ -117,6 +118,10 @@ class MyPageVC: UIViewController{
         
     }
     
+    func edit() {
+        self.setData()
+    }
+    
 
 }
 
@@ -156,8 +161,6 @@ extension MyPageVC : UITableViewDelegate, UITableViewDataSource {
             
             let orderItems = myPageOrderList[indexPath.section].orderMenuInfo
             
-            print(indexPath.row - 1)
-            
             cell.itemNameLabel.text = orderItems[indexPath.row-1].orderMenuName + " " + String(orderItems[indexPath.row-1].count) + "개"
             
             cell.itemConditionLabel.text = "(" + orderItems[indexPath.row-1].temperature + "/" + orderItems[indexPath.row-1].size + "/" + orderItems[indexPath.row-1].takeType + ")"
@@ -183,4 +186,3 @@ extension MyPageVC : UITableViewDelegate, UITableViewDataSource {
     }
     
 }
-
