@@ -84,7 +84,7 @@
         <!--MainVC-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="MainVC" customModule="UOrders_Owner" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Main" id="BYZ-38-t0r" customClass="MainVC" customModule="UOrders_Owner" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -99,6 +99,9 @@
                                 <rect key="frame" x="374" y="59" width="18" height="20"/>
                                 <color key="tintColor" systemColor="labelColor"/>
                                 <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="4yY-aV-9qY" appends="YES" id="maY-55-kDg"/>
+                                </connections>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" restorationIdentifier="cafeName" text="남산학사 cafe" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BT8-Nb-0Fr">
                                 <rect key="frame" x="141" y="98" width="132.5" height="29"/>
@@ -245,6 +248,7 @@
                     <connections>
                         <outlet property="cafeLoactionLabel" destination="dfL-vc-RsR" id="sS0-GW-reg"/>
                         <outlet property="cafeNameLabel" destination="BT8-Nb-0Fr" id="sfX-9O-2Ca"/>
+                        <outlet property="myPageButton" destination="uo0-Zm-CWd" id="mKy-Em-vSn"/>
                         <outlet property="orderManageButton" destination="86M-WV-acf" id="Xwg-QX-oxN"/>
                         <outlet property="orderManageHighlight" destination="XMr-VY-Mp5" id="v3O-rV-0hQ"/>
                         <outlet property="orderManageView" destination="Zwj-p9-fxx" id="62N-7k-PGJ"/>
@@ -264,6 +268,7 @@
                         <action selector="orderManageTap:" destination="BYZ-38-t0r" id="xTj-0q-zIq"/>
                     </connections>
                 </tapGestureRecognizer>
+                <tapGestureRecognizer id="4yY-aV-9qY"/>
             </objects>
             <point key="canvasLocation" x="2594.202898550725" y="77.678571428571431"/>
         </scene>
