@@ -1,20 +1,19 @@
 //
-//  ArrivedItemTableViewCell.swift
+//  MyPageOrderTableViewCell.swift
 //  UOrders_Owner
 //
-//  Created by SEONYOUNG LEE on 2020/12/02.
+//  Created by 양시연 on 2020/12/09.
 //
 
 import UIKit
 
-class ArrivedItemTableViewCell: UITableViewCell {
-
-    @IBOutlet weak var arrivedItemNameLabel: UILabel!
-    @IBOutlet weak var arrivedItemInfoLabel: UILabel!
+class MyPageTableViewContentCell: UITableViewCell {
+    
+    @IBOutlet weak var itemNameLabel: UILabel!
+    @IBOutlet weak var itemConditionLabel: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
