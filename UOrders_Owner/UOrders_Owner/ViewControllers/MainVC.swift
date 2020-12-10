@@ -21,6 +21,8 @@ class MainVC: UIViewController {
     @IBOutlet weak var orderManageView: UIView!
     @IBOutlet weak var storeManageView: UIView!
     
+    @IBOutlet weak var myPageButton: UIImageView!
+    
     var cafeNameAndLocation : CafeDataResult!
     
     override func viewDidLoad() {
@@ -43,11 +45,22 @@ class MainVC: UIViewController {
             }
         }
         
+        let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(goMyPageAction))
+        myPageButton.addGestureRecognizer(tapGestureRecognizer)
+        myPageButton.isUserInteractionEnabled = true
+
         orderManageView.isHidden = false
         storeManageView.isHidden = true
         
         orderManageHighlight.backgroundColor = UIColor(red: 229/255, green: 176/255, blue: 0/255, alpha: 100)
         storeManageHighlight.backgroundColor = UIColor(red: 219/255, green: 219/255, blue: 219/255, alpha: 100)
+    }
+    
+    @objc func goMyPageAction(sender : UITapGestureRecognizer) {
+        let myPageStoryboard = UIStoryboard(name: "MyPage", bundle: nil)
+        let vc = myPageStoryboard.instantiateInitialViewController()
+        vc?.modalTransitionStyle = .coverVertical
+        self.present(vc!, animated: true, completion: nil)
     }
     
     @IBAction func orderManageTap(_ sender: UIGestureRecognizer) {
@@ -56,8 +69,7 @@ class MainVC: UIViewController {
         orderManageHighlight.backgroundColor = UIColor(red: 229/255, green: 176/255, blue: 0/255, alpha: 100)
         storeManageHighlight.backgroundColor = UIColor(red: 219/255, green: 219/255, blue: 219/255, alpha: 100)
     }
-    
-    
+
     @IBAction func storeManageTap(_ sender : UIGestureRecognizer){
         orderManageView.isHidden = true
         storeManageView.isHidden = false
