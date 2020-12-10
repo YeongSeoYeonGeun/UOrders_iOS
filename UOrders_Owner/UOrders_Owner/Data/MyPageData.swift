@@ -34,6 +34,7 @@ struct TodayOrderInfo : Codable {
 struct OrderMenuInfo : Codable {
     let orderMenuName : String
     let count : Int
+    let size : String
     let temperature : String
     let takeType : String
 }
