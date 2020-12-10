@@ -14,8 +14,8 @@ struct OrderArriveResult : Codable{
 }
 
 struct ArrivedOrder : Codable{
-    let orderID : String
-    let totalPrice : String
+    let userId : String
+    let totalPrice : Int
     let menuInfo : [ArrivedItem]
 }
 

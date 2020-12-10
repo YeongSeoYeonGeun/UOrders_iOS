@@ -78,7 +78,7 @@ class MenuAddVC: UIViewController {
     }
     
     @IBAction func clidkMenuAdd(_ sender: Any) {
-                let newMenuInfo = NewMenu(cafeIndex: 13, menuIndex: 1, menuName: menuNameTextField.text!, menuTemperature: true, menuSize: true, menuPrice: Int(menuPriceTextField.text!)!, soldOut: 0, menuIMG: "")
+        let newMenuInfo = NewMenu(cafeIndex: 13, menuIndex: 1, menuName: menuNameTextField.text!, menuTemperature: true, menuSize: true, menuPrice: Int(menuPriceTextField.text!)!, soldOut: 0, menuIMG: "")
         
         MenuAddService.shared.sendMenuAddInfo(newMenu: newMenuInfo) {
             result in

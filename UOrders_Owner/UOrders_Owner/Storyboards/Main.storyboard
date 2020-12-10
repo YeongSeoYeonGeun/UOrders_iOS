@@ -196,14 +196,14 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q2w-gR-6E5">
-                                <rect key="frame" x="320" y="54" width="30" height="30"/>
+                                <rect key="frame" x="309" y="44" width="50" height="50"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="FFp-lo-kGE"/>
-                                    <constraint firstAttribute="width" constant="30" id="mrZ-WU-1Ey"/>
+                                    <constraint firstAttribute="height" constant="50" id="FFp-lo-kGE"/>
+                                    <constraint firstAttribute="width" constant="50" id="mrZ-WU-1Ey"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <state key="normal" image="alarm" catalog="system"/>
+                                <state key="normal" image="icBell"/>
                                 <connections>
                                     <segue destination="e9w-xN-ctx" kind="show" id="yy6-dq-6HN"/>
                                 </connections>
@@ -235,7 +235,7 @@
                             <constraint firstItem="rle-Xe-hqZ" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="grO-P3-f25"/>
                             <constraint firstItem="uo0-Zm-CWd" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="15" id="tre-tt-c2v"/>
                             <constraint firstItem="GNX-Ob-bj8" firstAttribute="centerY" secondItem="uo0-Zm-CWd" secondAttribute="centerY" id="woH-3g-lDw"/>
-                            <constraint firstItem="uo0-Zm-CWd" firstAttribute="leading" secondItem="Q2w-gR-6E5" secondAttribute="trailing" constant="24" id="x3L-RE-r9M"/>
+                            <constraint firstItem="uo0-Zm-CWd" firstAttribute="leading" secondItem="Q2w-gR-6E5" secondAttribute="trailing" constant="15" id="x3L-RE-r9M"/>
                             <constraint firstAttribute="trailing" secondItem="f8J-cb-eDC" secondAttribute="trailing" id="x5H-MV-EWs"/>
                             <constraint firstItem="f8J-cb-eDC" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="xal-Da-cJm"/>
                             <constraint firstItem="dfL-vc-RsR" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="yVL-eR-OZs"/>
@@ -445,8 +445,8 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MHG-2a-87f">
                                 <rect key="frame" x="8" y="748" width="398" height="52"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="주문 접수" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TwP-ce-hIT">
-                                        <rect key="frame" x="162" y="14" width="74" height="24"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="주문 접수" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TwP-ce-hIT">
+                                        <rect key="frame" x="0.0" y="0.0" width="398" height="52"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
@@ -455,8 +455,12 @@
                                 <color key="backgroundColor" red="0.043137254899999998" green="0.27450980390000002" blue="0.23529411759999999" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstItem="TwP-ce-hIT" firstAttribute="centerY" secondItem="MHG-2a-87f" secondAttribute="centerY" id="1NA-TJ-y0A"/>
+                                    <constraint firstAttribute="trailing" secondItem="TwP-ce-hIT" secondAttribute="trailing" id="7mW-aK-XgK"/>
                                     <constraint firstItem="TwP-ce-hIT" firstAttribute="centerX" secondItem="MHG-2a-87f" secondAttribute="centerX" id="9SF-YL-ojX"/>
+                                    <constraint firstItem="TwP-ce-hIT" firstAttribute="top" secondItem="MHG-2a-87f" secondAttribute="top" id="Gr8-Ev-PcT"/>
                                     <constraint firstAttribute="height" constant="52" id="XJR-Xg-fZF"/>
+                                    <constraint firstItem="TwP-ce-hIT" firstAttribute="leading" secondItem="MHG-2a-87f" secondAttribute="leading" id="hf7-XO-3sl"/>
+                                    <constraint firstAttribute="bottom" secondItem="TwP-ce-hIT" secondAttribute="bottom" id="nyT-wO-QIc"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -486,7 +490,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="q6A-cF-CJW"/>
                     <connections>
-                        <outlet property="acceptOrderButton" destination="MHG-2a-87f" id="4Ps-xK-dyy"/>
+                        <outlet property="acceptOrderButton" destination="TwP-ce-hIT" id="LTE-ep-dfc"/>
                         <outlet property="arriveMessageLabel" destination="5tI-0Q-ZhY" id="s44-cx-UfK"/>
                         <outlet property="arrivedItemTableView" destination="1hi-ZU-Zr3" id="H4h-Uj-xDo"/>
                         <outlet property="leftTimeLabel" destination="Zev-3c-Uaa" id="xUk-Vd-GeL"/>
@@ -1281,13 +1285,13 @@
     </scenes>
     <resources>
         <image name="2020-10-14-7-06-3" width="52" height="52"/>
-        <image name="alarm" catalog="system" width="124" height="128"/>
         <image name="edit-2" width="22" height="22"/>
         <image name="ic-add-menu" width="80" height="80"/>
         <image name="ic-add-photo" width="24" height="24"/>
         <image name="ic-back" width="48" height="48"/>
         <image name="ic-minus" width="28" height="28"/>
         <image name="ic-plus" width="28" height="28"/>
+        <image name="icBell" width="48" height="48"/>
         <image name="img-default" width="116" height="116"/>
         <image name="user" width="18" height="20"/>
         <systemColor name="labelColor">
