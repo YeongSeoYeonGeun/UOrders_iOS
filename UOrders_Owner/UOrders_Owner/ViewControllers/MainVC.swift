@@ -59,7 +59,8 @@ class MainVC: UIViewController {
     @objc func goMyPageAction(sender : UITapGestureRecognizer) {
         let myPageStoryboard = UIStoryboard(name: "MyPage", bundle: nil)
         let vc = myPageStoryboard.instantiateInitialViewController()
-        self.present(vc!, animated: false, completion: nil)
+        vc?.modalTransitionStyle = .coverVertical
+        self.present(vc!, animated: true, completion: nil)
     }
     
     @IBAction func orderManageTap(_ sender: UIGestureRecognizer) {

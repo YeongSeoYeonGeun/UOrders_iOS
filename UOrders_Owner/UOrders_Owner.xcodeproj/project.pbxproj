@@ -39,6 +39,7 @@
 		A98F2B7D2580D8900016AB09 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A98F2B7C2580D8900016AB09 /* Main.storyboard */; };
 		A98F2B8B2580F2290016AB09 /* MenuAddService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A98F2B8A2580F2290016AB09 /* MenuAddService.swift */; };
 		A98F2B902580F3360016AB09 /* MenuAddData.swift in Sources */ = {isa = PBXBuildFile; fileRef = A98F2B8F2580F3360016AB09 /* MenuAddData.swift */; };
+		A98F2B9925812E330016AB09 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A98F2B9825812E330016AB09 /* GoogleService-Info.plist */; };
 		A996905E2581C7240067E3FC /* OrderArriveData.swift in Sources */ = {isa = PBXBuildFile; fileRef = A996905D2581C7240067E3FC /* OrderArriveData.swift */; };
 		A99690632581C73B0067E3FC /* OrderArriveService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A99690622581C73B0067E3FC /* OrderArriveService.swift */; };
 		A9CA76562574B7B900D7441D /* OrderCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9CA76552574B7B900D7441D /* OrderCollectionViewCell.swift */; };
@@ -122,6 +123,8 @@
 		A98F2B7C2580D8900016AB09 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		A98F2B8A2580F2290016AB09 /* MenuAddService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuAddService.swift; sourceTree = "<group>"; };
 		A98F2B8F2580F3360016AB09 /* MenuAddData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuAddData.swift; sourceTree = "<group>"; };
+		A98F2B9425812D3F0016AB09 /* UOrders_OwnerDebug.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = UOrders_OwnerDebug.entitlements; sourceTree = "<group>"; };
+		A98F2B9825812E330016AB09 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		A996905D2581C7240067E3FC /* OrderArriveData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderArriveData.swift; sourceTree = "<group>"; };
 		A99690622581C73B0067E3FC /* OrderArriveService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderArriveService.swift; sourceTree = "<group>"; };
 		A9CA76552574B7B900D7441D /* OrderCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -293,6 +296,8 @@
 		A98ED9502561714400EB3E8D /* UOrders_Owner */ = {
 			isa = PBXGroup;
 			children = (
+				A98F2B9825812E330016AB09 /* GoogleService-Info.plist */,
+				A98F2B9425812D3F0016AB09 /* UOrders_OwnerDebug.entitlements */,
 				A939B814257FA3A900DD3481 /* Data */,
 				A94BC2D3257A0A02003B1475 /* Xib */,
 				A91767A8257763EF009D8D53 /* Service */,
@@ -456,6 +461,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A98F2B7D2580D8900016AB09 /* Main.storyboard in Resources */,
+				A98F2B9925812E330016AB09 /* GoogleService-Info.plist in Resources */,
 				A91767DE25779BED009D8D53 /* MyPage.storyboard in Resources */,
 				A91767CD25777976009D8D53 /* OrderListSectionHeader.xib in Resources */,
 				A98ED95B2561714700EB3E8D /* Assets.xcassets in Resources */,
@@ -789,6 +795,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = UOrders_Owner/UOrders_OwnerDebug.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = UOrders_Owner/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
