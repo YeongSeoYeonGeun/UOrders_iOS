@@ -37,6 +37,8 @@
 		A98ED9692561714700EB3E8D /* UOrders_OwnerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A98ED9682561714700EB3E8D /* UOrders_OwnerTests.swift */; };
 		A98ED9742561714700EB3E8D /* UOrders_OwnerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A98ED9732561714700EB3E8D /* UOrders_OwnerUITests.swift */; };
 		A98F1CB2256FC2A300E7AC8B /* MenuAddVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A98F1CB1256FC2A300E7AC8B /* MenuAddVC.swift */; };
+		A996905E2581C7240067E3FC /* OrderArriveData.swift in Sources */ = {isa = PBXBuildFile; fileRef = A996905D2581C7240067E3FC /* OrderArriveData.swift */; };
+		A99690632581C73B0067E3FC /* OrderArriveService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A99690622581C73B0067E3FC /* OrderArriveService.swift */; };
 		A9CA76562574B7B900D7441D /* OrderCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9CA76552574B7B900D7441D /* OrderCollectionViewCell.swift */; };
 		B1CD2C4F53C1DF88E9B94DDA /* Pods_UOrders_Owner_UOrders_OwnerUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8597A975C7D2F84F8C78F713 /* Pods_UOrders_Owner_UOrders_OwnerUITests.framework */; };
 		B568BEFD2577784C0033C1E5 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B568BEFC2577784C0033C1E5 /* LoginVC.swift */; };
@@ -107,6 +109,8 @@
 		A98ED9732561714700EB3E8D /* UOrders_OwnerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UOrders_OwnerUITests.swift; sourceTree = "<group>"; };
 		A98ED9752561714700EB3E8D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A98F1CB1256FC2A300E7AC8B /* MenuAddVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuAddVC.swift; sourceTree = "<group>"; };
+		A996905D2581C7240067E3FC /* OrderArriveData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderArriveData.swift; sourceTree = "<group>"; };
+		A99690622581C73B0067E3FC /* OrderArriveService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderArriveService.swift; sourceTree = "<group>"; };
 		A9CA76552574B7B900D7441D /* OrderCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderCollectionViewCell.swift; sourceTree = "<group>"; };
 		B568BEFC2577784C0033C1E5 /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
 		B568BF13257781580033C1E5 /* Login2.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login2.storyboard; sourceTree = "<group>"; };
@@ -164,6 +168,7 @@
 				A939B7D2257F833A00DD3481 /* OrderManageService.swift */,
 				A939B7E4257F853C00DD3481 /* MainService.swift */,
 				B5818D27257F9CB600D96980 /* MyPageService.swift */,
+				A99690622581C73B0067E3FC /* OrderArriveService.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -189,6 +194,7 @@
 				A939B80A257FA35200DD3481 /* OrderManageData.swift */,
 				A939B80F257FA36800DD3481 /* MyPageData.swift */,
 				A939B815257FA46600DD3481 /* MainData.swift */,
+				A996905D2581C7240067E3FC /* OrderArriveData.swift */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -558,6 +564,8 @@
 				A94BC2DD257A0D81003B1475 /* StoreManageService.swift in Sources */,
 				A917677C2577467C009D8D53 /* OrderArriveVC.swift in Sources */,
 				B5818CE6257F754200D96980 /* EditCafeInfoVC.swift in Sources */,
+				A996905E2581C7240067E3FC /* OrderArriveData.swift in Sources */,
+				A99690632581C73B0067E3FC /* OrderArriveService.swift in Sources */,
 				A9176728257660F2009D8D53 /* ItemTableViewCell.swift in Sources */,
 				B568BF312577B51D0033C1E5 /* MyPageVC.swift in Sources */,
 				A94BC2DD257A0D81003B1475 /* StoreManageService.swift in Sources */,
