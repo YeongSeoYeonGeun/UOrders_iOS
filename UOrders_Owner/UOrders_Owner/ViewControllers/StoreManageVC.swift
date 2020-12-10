@@ -21,6 +21,7 @@ class StoreManageVC: UIViewController {
         setStoreTableView()
         super.viewDidLoad()
         
+        print("^^^^^^^^^^^^^^^^^^^")
         StoreManageService.shared.getStoreManageMain() {
             result in
             switch result {
