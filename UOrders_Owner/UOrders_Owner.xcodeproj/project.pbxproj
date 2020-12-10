@@ -42,7 +42,6 @@
 		A9CA76562574B7B900D7441D /* OrderCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9CA76552574B7B900D7441D /* OrderCollectionViewCell.swift */; };
 		B1CD2C4F53C1DF88E9B94DDA /* Pods_UOrders_Owner_UOrders_OwnerUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8597A975C7D2F84F8C78F713 /* Pods_UOrders_Owner_UOrders_OwnerUITests.framework */; };
 		B568BEFD2577784C0033C1E5 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B568BEFC2577784C0033C1E5 /* LoginVC.swift */; };
-		B568BF14257781580033C1E5 /* Login2.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B568BF13257781580033C1E5 /* Login2.storyboard */; };
 		B568BF312577B51D0033C1E5 /* MyPageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B568BF302577B51D0033C1E5 /* MyPageVC.swift */; };
 		B568BF3625780EA00033C1E5 /* ProfitVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B568BF3525780EA00033C1E5 /* ProfitVC.swift */; };
 		B5818CE6257F754200D96980 /* EditCafeInfoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5818CE5257F754200D96980 /* EditCafeInfoVC.swift */; };
@@ -55,6 +54,8 @@
 		B5B2735F25811F5300E52FF8 /* MyPageTableViewFooterCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5B2735E25811F5300E52FF8 /* MyPageTableViewFooterCell.swift */; };
 		B5B2737025812C8800E52FF8 /* EditCafeInfoService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5B2736F25812C8800E52FF8 /* EditCafeInfoService.swift */; };
 		B5B2737525812D0A00E52FF8 /* EditCafeInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5B2737425812D0A00E52FF8 /* EditCafeInfo.swift */; };
+		B5B2737D2582020500E52FF8 /* LoginData.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5B2737C2582020500E52FF8 /* LoginData.swift */; };
+		B5B273822582025800E52FF8 /* LoginService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5B273812582025800E52FF8 /* LoginService.swift */; };
 		B5DBDD80257FF1C600120B48 /* StoreManageData.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5DBDD7F257FF1C600120B48 /* StoreManageData.swift */; };
 /* End PBXBuildFile section */
 
@@ -121,7 +122,6 @@
 		A98F2B8F2580F3360016AB09 /* MenuAddData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuAddData.swift; sourceTree = "<group>"; };
 		A9CA76552574B7B900D7441D /* OrderCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderCollectionViewCell.swift; sourceTree = "<group>"; };
 		B568BEFC2577784C0033C1E5 /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
-		B568BF13257781580033C1E5 /* Login2.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login2.storyboard; sourceTree = "<group>"; };
 		B568BF302577B51D0033C1E5 /* MyPageVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageVC.swift; sourceTree = "<group>"; };
 		B568BF3525780EA00033C1E5 /* ProfitVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfitVC.swift; sourceTree = "<group>"; };
 		B5818CE5257F754200D96980 /* EditCafeInfoVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditCafeInfoVC.swift; sourceTree = "<group>"; };
@@ -134,6 +134,8 @@
 		B5B2735E25811F5300E52FF8 /* MyPageTableViewFooterCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageTableViewFooterCell.swift; sourceTree = "<group>"; };
 		B5B2736F25812C8800E52FF8 /* EditCafeInfoService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditCafeInfoService.swift; sourceTree = "<group>"; };
 		B5B2737425812D0A00E52FF8 /* EditCafeInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditCafeInfo.swift; sourceTree = "<group>"; };
+		B5B2737C2582020500E52FF8 /* LoginData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginData.swift; sourceTree = "<group>"; };
+		B5B273812582025800E52FF8 /* LoginService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginService.swift; sourceTree = "<group>"; };
 		B5DBDD7F257FF1C600120B48 /* StoreManageData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoreManageData.swift; sourceTree = "<group>"; };
 		C8A08F8E9EF936CB92E41C9A /* Pods-UOrders_Owner.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UOrders_Owner.release.xcconfig"; path = "Target Support Files/Pods-UOrders_Owner/Pods-UOrders_Owner.release.xcconfig"; sourceTree = "<group>"; };
 		ED7C5BB0F25FD687ED879601 /* Pods-UOrders_OwnerTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UOrders_OwnerTests.release.xcconfig"; path = "Target Support Files/Pods-UOrders_OwnerTests/Pods-UOrders_OwnerTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -187,6 +189,7 @@
 				B5B273152580CA6A00E52FF8 /* ProfitService.swift */,
 				A98F2B8A2580F2290016AB09 /* MenuAddService.swift */,
 				B5B2736F25812C8800E52FF8 /* EditCafeInfoService.swift */,
+				B5B273812582025800E52FF8 /* LoginService.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -219,6 +222,7 @@
 				B5B273102580C97900E52FF8 /* ProfitData.swift */,
 				A98F2B8F2580F3360016AB09 /* MenuAddData.swift */,
 				B5B2737425812D0A00E52FF8 /* EditCafeInfo.swift */,
+				B5B2737C2582020500E52FF8 /* LoginData.swift */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -252,7 +256,6 @@
 			isa = PBXGroup;
 			children = (
 				A98F2B7C2580D8900016AB09 /* Main.storyboard */,
-				B568BF13257781580033C1E5 /* Login2.storyboard */,
 				A91767D825779BDF009D8D53 /* Login.storyboard */,
 				A91767DD25779BED009D8D53 /* MyPage.storyboard */,
 			);
@@ -452,7 +455,6 @@
 				A98ED95B2561714700EB3E8D /* Assets.xcassets in Resources */,
 				A917681A2577AF6D009D8D53 /* OrderListSectionFooter.xib in Resources */,
 				A91767D925779BDF009D8D53 /* Login.storyboard in Resources */,
-				B568BF14257781580033C1E5 /* Login2.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -593,6 +595,8 @@
 				B5B2735F25811F5300E52FF8 /* MyPageTableViewFooterCell.swift in Sources */,
 				A917677C2577467C009D8D53 /* OrderArriveVC.swift in Sources */,
 				B5818CE6257F754200D96980 /* EditCafeInfoVC.swift in Sources */,
+				B5B273822582025800E52FF8 /* LoginService.swift in Sources */,
+				B5B2737D2582020500E52FF8 /* LoginData.swift in Sources */,
 				A9176728257660F2009D8D53 /* ItemTableViewCell.swift in Sources */,
 				B568BF312577B51D0033C1E5 /* MyPageVC.swift in Sources */,
 				A94BC2DD257A0D81003B1475 /* StoreManageService.swift in Sources */,

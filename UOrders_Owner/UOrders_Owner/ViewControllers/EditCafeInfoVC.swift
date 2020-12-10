@@ -23,7 +23,6 @@ class EditCafeInfoVC: UIViewController {
     }
     
     @IBAction func clickDoneButton(_ sender: Any) {
-        self.del?.edit()
         postData()
     }
     
@@ -71,6 +70,7 @@ class EditCafeInfoVC: UIViewController {
             switch result {
             case .success(let successData) :
                 guard successData.self != nil  else { return }
+                self.del?.edit()
                 self.dismiss(animated: false, completion: nil)
                 
             case .failure(let error) :
