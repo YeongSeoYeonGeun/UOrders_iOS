@@ -31,8 +31,36 @@ class LoginVC: UIViewController {
         print("password : " + passwordTextField.text!)
         // Todo: 통신
         
+        let id = self.idTextField.text!
+        let pw = self.passwordTextField.text!
+        let loginData = LoginData(ownerId: id, ownerPw: pw, deviceToken: "")
+        
+        LoginService.shared.login(loginData: loginData) {
+            result in
+            switch result {
+            case .success(let successData) :
+                guard successData.self != nil  else { return }
+                self.dismiss(animated: false, completion: nil)
+                print("로그인 성공!")
+                self.goMainVC()
+                
+                
+                
+            case .failure(let error) :
+                print("login Error ", error)
+            }
+        }
+        
     }
     
+    func goMainVC(){
+        let storyboard = UIStoryboard(name:"Main", bundle: nil)
+        
+        let vc = storyboard.instantiateViewController(withIdentifier: "Main")
+        vc.modalPresentationStyle = .fullScreen
+                
+        self.present(vc, animated: true, completion: nil)
+    }
     
     
 

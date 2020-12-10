@@ -1,10 +1,10 @@
 PODS:
-  - Alamofire (5.0.5)
+  - Alamofire (5.4.0)
   - BEMCheckBox (1.4.1)
   - SwiftyJSON (5.0.0)
 
 DEPENDENCIES:
-  - Alamofire (~> 5.0.0-beta.7)
+  - Alamofire
   - BEMCheckBox
   - SwiftyJSON
 
@@ -15,10 +15,10 @@ SPEC REPOS:
     - SwiftyJSON
 
 SPEC CHECKSUMS:
-  Alamofire: df2f8f826963b08b9a870791ad48e07a10090b2e
+  Alamofire: 3b6a534a3df22db367e4dedeeca73d1ddfcf0e2f
   BEMCheckBox: 5ba6e37ade3d3657b36caecc35c8b75c6c2b1a4e
   SwiftyJSON: 36413e04c44ee145039d332b4f4e2d3e8d6c4db7
 
-PODFILE CHECKSUM: 6608857fe2cf098ee79fe7afdc2e62622f766c25
+PODFILE CHECKSUM: 1109309e9e9742918dedf343f59e733e598d76e6
 
 COCOAPODS: 1.9.1

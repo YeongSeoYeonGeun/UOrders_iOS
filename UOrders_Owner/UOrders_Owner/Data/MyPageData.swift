@@ -1,8 +1,8 @@
 //
-//  MypageData.swift
+//  MyPageData.swift
 //  UOrders_Owner
 //
-//  Created by 양시연 on 2020/12/08.
+//  Created by SEONYOUNG LEE on 2020/12/08.
 //
 
 import Foundation
@@ -15,10 +15,16 @@ struct MyPageResponse : Codable {
 
 struct MyPage : Codable {
     let cafeInfo : CafeInfo
-    let todayOrderInfo : [OrderInfo]
+    let todayOrderInfo : [TodayOrderInfo]
 }
 
-struct OrderInfo : Codable {
+struct CafeInfo : Codable {
+    let cafeName : String
+    let cafeLocation : String
+    let cafeImage : String
+}
+
+struct TodayOrderInfo : Codable {
     let orderer : String
     let orderTime : String
     let orderMenuInfo : [OrderMenuInfo]
@@ -28,6 +34,7 @@ struct OrderInfo : Codable {
 struct OrderMenuInfo : Codable {
     let orderMenuName : String
     let count : Int
+    let size : String
     let temperature : String
     let takeType : String
 }
