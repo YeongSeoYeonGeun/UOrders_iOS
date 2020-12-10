@@ -9,6 +9,9 @@ import UIKit
 
 class ArrivedItemTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var arrivedItemNameLabel: UILabel!
+    @IBOutlet weak var arrivedItemInfoLabel: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
